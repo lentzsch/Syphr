@@ -1,6 +1,9 @@
 
 
 
+from operator import indexOf
+
+
 class Rotor:
     def __init__(self, name, position):
         self.name = name
@@ -13,14 +16,15 @@ class Rotor:
     
     def set_rotor(self):
         rotors = {
-            "I":    ["EKMFLGDQVZNTOWYHXUSPAIBRCJ", ["R"], ["Q"]],
-            "II":   ["AJDKSIRUXBLHWTMCQGZNPYFVOE", ["F"], ["E"]],
-            "III":  ["BDFHJLCPRTXVZNYEIWGAKMUSQO", ["W"], ["V"]],
-            "IV":   ["ESOVPZJAYQUIRHXLNFTGKDCMWB", ["K"], ["J"]],
-            "V":    ["VZBRGITYUPSDNHLXAWMJQOFECK", ["A"], ["Z"]],
-            "VI":   ["JPGVOUMFYQBENHZRDKASXLICTW", ["AN"], ["ZM"]],
-            "VII":  ["NZJHGRCXMYSWBOUFAIVLPEKQDT", ["AN"], ["ZM"]],
-            "VIII": ["FKQHTLXOCBJSPDZRAMEWNIUYGV", ["AN"], ["ZM"]]}
+                "I":    ["EKMFLGDQVZNTOWYHXUSPAIBRCJ", ["R"], ["Q"]],
+                "II":   ["AJDKSIRUXBLHWTMCQGZNPYFVOE", ["F"], ["E"]],
+                "III":  ["BDFHJLCPRTXVZNYEIWGAKMUSQO", ["W"], ["V"]],
+                "IV":   ["ESOVPZJAYQUIRHXLNFTGKDCMWB", ["K"], ["J"]],
+                "V":    ["VZBRGITYUPSDNHLXAWMJQOFECK", ["A"], ["Z"]],
+                "VI":   ["JPGVOUMFYQBENHZRDKASXLICTW", ["AN"], ["ZM"]],
+                "VII":  ["NZJHGRCXMYSWBOUFAIVLPEKQDT", ["AN"], ["ZM"]],
+                "VIII": ["FKQHTLXOCBJSPDZRAMEWNIUYGV", ["AN"], ["ZM"]]
+                }
 
         rotor = rotors[self.name]
         self.sequence = rotor[0]
@@ -39,8 +43,10 @@ class Rotor:
         self.base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     def rotate(self):
-        self.base = self.base[1:] + self.base[:1]
         self.sequence = self.sequence[1:] + self.sequence[:1]
+
+    def rotor_encrypt(self, char):
+        return self.sequence[self.base.index(char)]
 
     def __repr__(self):
         return f"Rotor ({self.name}, {self.position}, {self.base}, {self.sequence}, {self.notch})"
