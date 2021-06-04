@@ -13,7 +13,7 @@ class Plugboard:
             self.config[chars[1]] = chars[0]
 
     
-    def plugboard_encrypt(self, char):
+    def plugboard_swap(self, char):
         return self.config[char]
 
     def __repr__(self):

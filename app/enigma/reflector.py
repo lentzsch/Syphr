@@ -3,7 +3,7 @@
 class Reflector:
     def __init__(self, setting):
         self.setting = setting
-        self.base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        self.alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         self.sequence = ''
         self.set_sequence()
 
@@ -16,8 +16,11 @@ class Reflector:
         self.sequence = settings[self.setting]
 
 
-    def reflector_encrypt(self, char):
-        return self.sequence[self.base.index(char)]
+    # def reflector_return(self, char):
+    #     return self.sequence[self.base.index(char)]
+
+    def reflector_return(self, index):
+        return self.sequence.index(self.alpha[index])
 
     def __repr__(self):
         return f'Reflector ({self.setting}, {self.base}, {self.sequence})'
