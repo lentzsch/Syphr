@@ -1,0 +1,10 @@
+
+.auth-cluster,
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-cluster {
+    width: 200px;
+}
