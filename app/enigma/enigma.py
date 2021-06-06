@@ -26,29 +26,29 @@ def encrypt(message):
 
     for char in message:
         # get the index for the character in the alphabet
-        char = alpha.index(char)
+        idx = alpha.index(char)
         # begin encryption
         # first pass through plugboard
-        char = plugboard.plugboard_swap(char)
+        idx = plugboard.plugboard_swap(idx)
         #first pass through rotors and rotation of rotors
         rotor_one.rotate()
-        char = rotor_one.rotor_in(char)
+        idx = rotor_one.rotor_in(idx)
         if rotor_one.alpha[0] in rotor_one.notch:
             rotor_two.rotate()
-        char = rotor_two.rotor_in(char)
+        idx = rotor_two.rotor_in(idx)
         if rotor_two.alpha[0] in rotor_two.notch:
             rotor_three.rotate()
-        char = rotor_three.rotor_in(char)
+        idx = rotor_three.rotor_in(idx)
         # reflector bounces "signal" back through machine
-        char = reflector.reflector_return(char)
+        idx = reflector.reflector_return(idx)
         # second run back through rotors with no rotation
-        char = rotor_three.rotor_out(char)
-        char = rotor_two.rotor_out(char)
-        char = rotor_one.rotor_out(char)
+        idx = rotor_three.rotor_out(idx)
+        idx = rotor_two.rotor_out(idx)
+        idx = rotor_one.rotor_out(idx)
         # second run through the plugboard and out the machine
-        char = plugboard.plugboard_swap(char)
+        idx = plugboard.plugboard_swap(idx)
 
-        new_message += alpha[char]
+        new_message += alpha[idx]
 
     return new_message
 
