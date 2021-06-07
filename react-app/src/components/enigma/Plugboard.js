@@ -1,10 +1,22 @@
 import React from 'react';
+import './Plugboard.css'
 
 
 const Plugboard = () => {
+
+    const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
+
     return (
         <div className="plugboard">
-            <h1>This will be the plugboard</h1>
+            {plugboardAlpha.map((char) => {
+                return (
+                    <div className="character-container"
+                          style={{ gridPosition: char}}
+                    >
+                        {char}
+                    </div>
+                )
+            })}
         </div>
     )
 }

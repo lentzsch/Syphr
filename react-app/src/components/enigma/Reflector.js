@@ -1,10 +1,12 @@
 import React from 'react';
-
+import './index.css'
 
 const Reflector = () => {
     return (
-        <div className="plugboard">
-            <h1>This will be the reflector</h1>
+        <div className="reflector">
+            <h1>A</h1>
+            <h1>B</h1>
+            <h1>C</h1>
         </div>
     )
 }

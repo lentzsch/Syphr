@@ -1,5 +1,5 @@
 import React from 'react';
-import './MessagesBox.css'
+import './TextBoxes.css'
 
 const MessagesBox = () => {
     return (

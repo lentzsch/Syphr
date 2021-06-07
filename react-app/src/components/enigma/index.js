@@ -1,9 +1,10 @@
 import React from 'react';
 import Reflector from './Reflector';
 import Rotors from './Rotors';
+import RotorSelector from './RotorSelector'
 import Lightboard from './Lightboard';
 import Plugboard from './Plugboard';
-import './index.css'
+import './index.css';
 
 const Enigma = () => {
     return (
@@ -14,9 +15,9 @@ const Enigma = () => {
             <div className="rotors-container">
                 <Rotors />
             </div>
-            {/* <div>
-                <h1>Place Holder Div</h1>
-            </div> */}
+            <div>
+                <RotorSelector />
+            </div>
             <div className="lightboard-container">
                 <Lightboard />
             </div>

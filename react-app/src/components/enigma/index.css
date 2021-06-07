@@ -1,16 +1,19 @@
+@import "../Main.css";
+
 .enigma-container {
+    grid-area: C;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 1fr  1fr;
     grid-template-areas: 
     "A B C"
     "D D D"
     "E E E";
-
     max-width: 800px;
-    max-height: 800px;
+    height: 550px;
     margin: auto;
     background-color:  olive;
-    margin-top: 50px;
+    /* margin-top: px; */
 }
 
 .reflector-container {
@@ -26,19 +29,23 @@
 }
 
 .lightboard-container {
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: flex;
-    justify-content: center;
+    grid-area: D;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
     background-color:dimgray;
 }
 
 .plugboard-container {
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: flex;
-    justify-content: center;
+    grid-area: E;
+    height: 100%;
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
     background-color: darkslategrey;
+}
+
+.reflector {
+    display: flex;
 }

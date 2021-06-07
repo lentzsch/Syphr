@@ -1,0 +1,40 @@
+@import "./Main.css";
+
+.messages-box-container {
+    grid-area: A;
+    width: 1000px;
+    height: 250px;
+    background-color: lightslategray;
+    margin: auto;
+}
+
+.input-box-container {
+    grid-area: B;
+    /* margin-left: 10px; */
+}
+.output-box-container {
+    grid-area: D;
+    /* margin-right: 10px; */
+}
+.input-box-container
+.output-box-container {
+    /* display: flex;
+    justify-content: center; */
+    /* margin: 50px;
+    padding: 10px */
+}
+
+.output-box,
+.input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 300px;
+    background-color: grey;
+    padding: 5px;
+}
+
+.input-text-area {
+    height: 95%;
+}
