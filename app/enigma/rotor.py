@@ -48,18 +48,13 @@ class Rotor:
         self.sequence = self.sequence[1:] + self.sequence[:1]
         self.offset += 1
 
-
-    # def rotor_in(self, char):
-    #     return self.sequence[self.alpha.index(char)]
-
-    # def rotor_out(self, char):
-    #     return self.alpha[self.sequence.index(char)]
-
+    # movement of "signal" through the rotor from one side to another.
     def rotor_in(self, index):
         return self.alpha.index(self.sequence[index])
 
     def rotor_out(self, index):
         return self.sequence.index(self.alpha[index])
+    
 
     def __repr__(self):
         return f"Rotor ({self.name}, {self.position}, {self.base}, {self.sequence}, {self.notch})"
