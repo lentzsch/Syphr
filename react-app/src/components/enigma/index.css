@@ -1,0 +1,44 @@
+.enigma-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "A B C"
+    "D D D"
+    "E E E";
+
+    max-width: 800px;
+    max-height: 800px;
+    margin: auto;
+    background-color:  olive;
+    margin-top: 50px;
+}
+
+.reflector-container {
+    display: flex;
+    justify-content: center;
+    background-color: olivedrab;
+}
+
+.rotors-container {
+    display: flex;
+    justify-content: center;
+    background-color: peru;
+}
+
+.lightboard-container {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    background-color:dimgray;
+}
+
+.plugboard-container {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    background-color: darkslategrey;
+}
