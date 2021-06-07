@@ -14,26 +14,26 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="auth-cluster">
-          <div>
+          {/* <div> */}
             <LoginFormModal />
             {/* <NavLink to="/login" exact={true} activeClassName="active">
               Login
             </NavLink> */}
-          </div>
-          <div>
+          {/* </div>
+          <div> */}
             <SignupFormModal />
             {/* <NavLink to="/sign-up" exact={true} activeClassName="active">
               Sign Up
             </NavLink> */}
-          </div>
+          {/* </div> */}
           {/* <li>
             <NavLink to="/users" exact={true} activeClassName="active">
               Users
             </NavLink>
           </li> */}
-          <div>
+          {/* <div> */}
             <LogoutButton />
-          </div>
+          {/* </div> */}
        </div>
     </nav>
   );
