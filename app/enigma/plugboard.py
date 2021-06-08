@@ -1,5 +1,6 @@
 
 
+
 class Plugboard:
     def __init__(self, config):
         self.alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
