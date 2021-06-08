@@ -13,6 +13,7 @@ class Message(db.Model):
         return {
             "id": self.id,
             "message": self.message,
+            "selfDestructDate": self.selfDestructDate,
             "senderId": self.senderId,
             "recieverId": self.recieverId
         }
