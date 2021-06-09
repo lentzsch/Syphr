@@ -9,7 +9,7 @@
     "A B C"
     "D D D"
     "E E E";
-    max-width: 800px;
+    min-width: 800px;
     height: 550px;
     margin: auto;
     background-color:  olive;

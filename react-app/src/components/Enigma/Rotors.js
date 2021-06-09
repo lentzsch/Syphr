@@ -3,9 +3,9 @@ import React from 'react';
 
 const Rotors = () => {
 
-    settings = [];
+    let settings = [];
     for (let i = 1; i < 27; i++) {
-        setting.push(i.toString())
+        settings.push(i.toString())
     }
 
     return (
