@@ -24,7 +24,8 @@
 
 .rotors-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     background-color: peru;
 }
 
@@ -46,6 +47,6 @@
     background-color: darkslategrey;
 }
 
-.reflector {
-    display: flex;
-}
+/* .rotor-selector {
+    grid-area: C;
+} */

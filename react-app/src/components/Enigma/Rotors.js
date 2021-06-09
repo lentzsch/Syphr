@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Rotors.css';
 
 const Rotors = () => {
 
