@@ -32,6 +32,50 @@ const Rotors = () => {
                     </select>
                 </div>
             </div>
+            <div className="rotor-container-two">
+                <div className="rotor-position-setting-two-container">
+                    <h3>n</h3>
+                </div>
+                <div className="rotor-position-select-two-container">
+                    <select
+                        className="rotor-position-select-two"
+                        id="rotor-position-select-two"
+                        name="rotor-position-select-two"
+                    >
+                        {settings.map((setting) => {
+                            return (
+                                <option key={`rotor-two-setting-${setting}`}
+                                    value={setting}
+                                >
+                                    {setting}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+            </div>
+            <div className="rotor-container-one">
+                <div className="rotor-position-setting-one-container">
+                    <h3>n</h3>
+                </div>
+                <div className="rotor-position-select-one-container">
+                    <select
+                        className="rotor-position-select-one"
+                        id="rotor-position-select-one"
+                        name="rotor-position-select-one"
+                    >
+                        {settings.map((setting) => {
+                            return (
+                                <option key={`rotor-one-setting-${setting}`}
+                                    value={setting}
+                                >
+                                    {setting}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+            </div>
         </div>
     )
 }
