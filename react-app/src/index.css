@@ -1,6 +1,8 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
+    background-image: url('https://inspirationfeed.com/wp-content/uploads/2019/12/wooden.jpg');
+    background-size: 100%;
 }
 
 button {
@@ -9,4 +11,7 @@ button {
 
 a {
     text-decoration: none;
+    color: rgb(233, 222, 222);
+    text-shadow: 4px 4px 6px rgb(230, 152, 80);
+    text-shadow: 1px 1px 2px rgb(44, 18, 3);
 }

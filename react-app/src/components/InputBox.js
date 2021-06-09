@@ -12,7 +12,7 @@ const InputBox = () => {
                     type="text"
                     placeholder="Type message to be encrypted/decrypted here."
                     />
-                <button type="submit">Encrypt/Decrypt</button>
+                <button className="enigma-encrypt-button" type="submit">Encrypt/Decrypt</button>
             </div>
         </div>
     )
