@@ -5,7 +5,14 @@ const OutputBox = () => {
     return (
         <div className="output-box-container">
             <div className="output-box">
-                <h2>This will be the output box</h2>
+                <label htmlFor="enigma-output">Enigma Output</label>
+                <textarea
+                    className="output-text-area"
+                    name="enigma-output"
+                    type="text"
+                    placeholder="Encrypted/Decrypted message will appear here. 
+                                 Press send to deliver encrypted message."
+                />
                 <button type="submit">Send</button>
             </div>
         </div>
