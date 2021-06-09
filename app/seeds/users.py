@@ -6,22 +6,33 @@ def seed_users():
 
     turing = User(code_name='Turing', email='a.turing@bletchlypark.gov',
                 password='password')
+    db.session.add(turing)
+
     tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
                 password='password')
+    db.session.add(tricycle)
+
     artist = User(code_name="Artist", email='j.jebsen@mi6.gov',
                     password='password')
+    db.session.add(artist)
+
     dreadnought = User(code_name="Dreadnaught", email='i.popov@mi6.gov',
                     password='password')
+    db.session.add(dreadnought)
+
     c = User(code_name="C", email='s.menzies@mi6.gov',
                     password='password')
+    db.session.add(c)
+
     tar = User(code_name="TAR", email='t.robinson@mi6.gov',
                     password='password')
-    tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
-                    password='password')
-    tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
-                    password='password')
+    db.session.add(tar)
 
-    db.session.add(demo)
+    # tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
+    #                 password='password')
+    # tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
+    #                 password='password')
+
 
     db.session.commit()
 
