@@ -34,7 +34,8 @@
     background-color: grey;
     padding: 5px;
 }
-
+.output-text-area,
 .input-text-area {
     height: 95%;
 }
+

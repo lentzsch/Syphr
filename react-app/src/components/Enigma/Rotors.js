@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './Rotors.css';
 
 const Rotors = () => {
 
-    settings = [];
+    let settings = [];
     for (let i = 1; i < 27; i++) {
-        setting.push(i.toString())
+        settings.push(i.toString())
     }
 
     return (
@@ -24,6 +24,50 @@ const Rotors = () => {
                             return (
                                 <option key={`rotor-three-setting-${setting}`}
                                         value={setting}
+                                >
+                                    {setting}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+            </div>
+            <div className="rotor-container-two">
+                <div className="rotor-position-setting-two-container">
+                    <h3>n</h3>
+                </div>
+                <div className="rotor-position-select-two-container">
+                    <select
+                        className="rotor-position-select-two"
+                        id="rotor-position-select-two"
+                        name="rotor-position-select-two"
+                    >
+                        {settings.map((setting) => {
+                            return (
+                                <option key={`rotor-two-setting-${setting}`}
+                                    value={setting}
+                                >
+                                    {setting}
+                                </option>
+                            )
+                        })}
+                    </select>
+                </div>
+            </div>
+            <div className="rotor-container-one">
+                <div className="rotor-position-setting-one-container">
+                    <h3>n</h3>
+                </div>
+                <div className="rotor-position-select-one-container">
+                    <select
+                        className="rotor-position-select-one"
+                        id="rotor-position-select-one"
+                        name="rotor-position-select-one"
+                    >
+                        {settings.map((setting) => {
+                            return (
+                                <option key={`rotor-one-setting-${setting}`}
+                                    value={setting}
                                 >
                                     {setting}
                                 </option>

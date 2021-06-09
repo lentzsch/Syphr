@@ -1,16 +1,26 @@
 @import './index.css';
 
 .rotor-selector {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "A B C"
-    "D E";
+    "D E F";
+    height: 100%;
+    width: 100%; */
 }
 
+.rotor-selector-top-row {
+    display: flex;
+    justify-content: space-around;
+}
 
-.rotor-one,
+.rotor-selector-bottom-row {
+    display: flex;
+    justify-content: space-around;
+}
+/* .rotor-one,
 .rotor-two,
 .rotor-three,
 .rotor-four,
@@ -20,8 +30,8 @@
     align-items: center;
     width: 100%;
     height: 100%;
-}
-.rotor-one {
+} */
+/* .rotor-one {
     grid-area: A;
 }
 .rotor-two {
@@ -35,4 +45,4 @@
 }
 .rotor-five {
     grid-area: E;
-}
+} */

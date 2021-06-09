@@ -12,12 +12,12 @@ const Enigma = () => {
             <div className="reflector-container">
                 <Reflector />
             </div>
-            <div className="rotors-container">
+            {/* <div className="rotors-container"> */}
                 <Rotors />
-            </div>
-            <div>
+            {/* </div> */}
+            {/* <div> */}
                 <RotorSelector />
-            </div>
+            {/* </div> */}
             <div className="lightboard-container">
                 <Lightboard />
             </div>

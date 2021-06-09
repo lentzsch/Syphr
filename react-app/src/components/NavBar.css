@@ -8,12 +8,15 @@
     color: black;
     font-size: xx-large;
     font-weight: 900;
-    padding: 10px;
-    height: 25px;
+    /* padding: 10px; */
+    height: 50px;
+    width: 100%;
+    margin: 0px;
 }
 
 
 
 .auth-cluster {
     width: 225px;
+    margin: auto;
 }
