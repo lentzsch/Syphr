@@ -13,7 +13,7 @@ const OutputBox = () => {
                     placeholder="Encrypted/Decrypted message will appear here. 
                                  Press send to deliver encrypted message."
                 />
-                <button type="submit">Send</button>
+                <button className="enigma-send-button" type="submit">Send</button>
             </div>
         </div>
     )

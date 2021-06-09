@@ -11,8 +11,8 @@ const Rotors = () => {
     return (
         <div className="rotors-container">
             <div className="rotor-container-three">
-                <div className="rotor-position-setting-three-container">
-                    <h3>n</h3>
+                <div className="rotor-number-three-container">
+                    <h3>I</h3>
                 </div>
                 <div className="rotor-position-select-three-container">
                     <select
@@ -33,8 +33,8 @@ const Rotors = () => {
                 </div>
             </div>
             <div className="rotor-container-two">
-                <div className="rotor-position-setting-two-container">
-                    <h3>n</h3>
+                <div className="rotor-number-two-container">
+                    <h3>II</h3>
                 </div>
                 <div className="rotor-position-select-two-container">
                     <select
@@ -55,8 +55,8 @@ const Rotors = () => {
                 </div>
             </div>
             <div className="rotor-container-one">
-                <div className="rotor-position-setting-one-container">
-                    <h3>n</h3>
+                <div className="rotor-number-one-container">
+                    <h3>III</h3>
                 </div>
                 <div className="rotor-position-select-one-container">
                     <select

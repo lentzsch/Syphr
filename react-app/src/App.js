@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
-import Main from "./components/Main"
+import Main from "./components/Main";
+import Footer from "./components/Footer"
 import Enigma from "./components/Enigma"
 import MessagesBox from "./components/MessagesBox"
 import InputOutputBoxes from "./components/InputBox";
@@ -33,6 +34,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Main />
+      <Footer />
       {/* <Switch>
         <Route path="/login" exact={true}>
           <LoginForm />

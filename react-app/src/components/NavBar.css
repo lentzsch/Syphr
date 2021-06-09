@@ -1,10 +1,18 @@
 
+
+.nav-bar {
+    background-image: url('https://wallpaperaccess.com/full/3004992.jpg');
+    background-size: auto;
+    box-shadow: 0px 4px 8px black;
+}
+
 .auth-cluster,
 .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: sienna;;
+    /* background-color: sienna;; */
+
     color: black;
     font-size: xx-large;
     font-weight: 900;
