@@ -8,15 +8,17 @@
     color: black;
     font-size: xx-large;
     font-weight: 900;
-    /* padding: 10px; */
     height: 50px;
     width: 100%;
     margin: 0px;
 }
 
-
+.syphr-home {
+    margin-left: 20px;
+}
 
 .auth-cluster {
-    width: 225px;
-    margin: auto;
+    width: fit-content;
+    padding-left: 20px;
+    margin-right: 20px;
 }

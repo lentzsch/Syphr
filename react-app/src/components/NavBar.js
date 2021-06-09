@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import DemoButton from './auth/DemoButton'
 import LogoutButton from './auth/LogoutButton';
 import LoginFormModal from './LoginFormModal';
 import SignupFormModal from './SignupFormModal';
@@ -14,6 +15,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="auth-cluster">
+            <DemoButton />
           {/* <div> */}
             <LoginFormModal />
             {/* <NavLink to="/login" exact={true} activeClassName="active">
