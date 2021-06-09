@@ -4,17 +4,28 @@ from app.models import db, User
 # Adds a demo user, you can add other users here if you want
 def seed_users():
 
-    demo = User(code_name='Demo', email='demo@aa.io',
+    turing = User(code_name='Turing', email='a.turing@bletchlypark.gov',
                 password='password')
+    tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
+                password='password')
+    artist = User(code_name="Artist", email='j.jebsen@mi6.gov',
+                    password='password')
+    dreadnought = User(code_name="Dreadnaught", email='i.popov@mi6.gov',
+                    password='password')
+    c = User(code_name="C", email='s.menzies@mi6.gov',
+                    password='password')
+    tar = User(code_name="TAR", email='t.robinson@mi6.gov',
+                    password='password')
+    tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
+                    password='password')
+    tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
+                    password='password')
 
     db.session.add(demo)
 
     db.session.commit()
 
-# Uses a raw SQL query to TRUNCATE the users table.
-# SQLAlchemy doesn't have a built in function to do this
-# TRUNCATE Removes all the data from the table, and resets
-# the auto incrementing primary key
+
 def undo_users():
     db.session.execute('TRUNCATE users RESTART IDENTITY CASCADE;')
     db.session.commit()
