@@ -37,6 +37,7 @@ const NavBar = () => {
             <LogoutButton />
           {/* </div> */}
        </div>
+       <fade/>
     </nav>
   );
 }
