@@ -9,7 +9,7 @@ const Lightboard = () => {
         <div className="lightboard">
             {lightboardAlpha.map((char) => {
                 return (
-                    <div className="character-container"
+                    <div className="character-container lightboard"
                          style={{ gridPosition: char }}
                     >
                         {char}

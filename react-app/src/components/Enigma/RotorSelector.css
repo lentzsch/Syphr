@@ -1,15 +1,6 @@
 @import './index.css';
 
-.rotor-selector {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "A B C"
-    "D E F";
-    height: 100%;
-    width: 100%; */
-}
+
 
 .rotor-selector-top-row {
     display: flex;
@@ -20,6 +11,7 @@
     display: flex;
     justify-content: space-around;
 }
+
 /* .rotor-one,
 .rotor-two,
 .rotor-three,

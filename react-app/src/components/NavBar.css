@@ -48,3 +48,14 @@ fade {
     /* z-index: 1; */
     /* position: relative; */
 }
+
+.auth-cluster button {
+    color: white;
+    background-image: url('https://wallpaperaccess.com/full/531249.jpg');
+    background-size: cover;
+    border: solid 2px silver;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: 525;
+    box-shadow: 4px 4px 6px black;
+}

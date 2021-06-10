@@ -10,7 +10,7 @@ const Plugboard = () => {
         <div className="plugboard">
             {plugboardAlpha.map((char) => {
                 return (
-                    <div className="character-container"
+                    <div className="plug-socket"
                           style={{ gridPosition: char}}
                     >
                         {char}

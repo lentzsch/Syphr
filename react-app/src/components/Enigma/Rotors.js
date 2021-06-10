@@ -19,6 +19,7 @@ const Rotors = () => {
                         className="rotor-position-select-three"
                         id="rotor-position-select-three"
                         name="rotor-position-select-three"
+                        size="3"
                     >
                         {settings.map((setting) => {
                             return (
@@ -41,6 +42,7 @@ const Rotors = () => {
                         className="rotor-position-select-two"
                         id="rotor-position-select-two"
                         name="rotor-position-select-two"
+                        size="3"
                     >
                         {settings.map((setting) => {
                             return (
@@ -63,6 +65,7 @@ const Rotors = () => {
                         className="rotor-position-select-one"
                         id="rotor-position-select-one"
                         name="rotor-position-select-one"
+                        size="3"
                     >
                         {settings.map((setting) => {
                             return (
