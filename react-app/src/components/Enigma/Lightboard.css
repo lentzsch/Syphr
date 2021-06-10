@@ -29,7 +29,7 @@
 }
 
 .character-container:hover {
-    color: rgb(241, 224, 124);
+    color: rgb(255, 241, 160);
     text-shadow: 0 0 20px rgb(248, 237, 171);
     /* animation: glow 1s ease-in-out infinite alternate; */
 }
