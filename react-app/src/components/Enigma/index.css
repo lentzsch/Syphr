@@ -12,40 +12,60 @@
     width: 800px;
     height: 550px;
     /* margin: auto; */
-    background-color:  olive;
+    color: silver;
+    /* background-color:  olive; */
     /* margin-top: px; */
     box-shadow:12px 12px 20px black;
+    background-image: url('https://wallpaperaccess.com/full/4607355.jpg');
+    background-size: cover;
+}
+
+h1:hover {
+    color: rgb(246, 213, 64);
+    text-shadow: 0 0 20px rgb(248, 237, 171);
 }
 
 .reflector-container {
     display: flex;
     justify-content: center;
-    background-color: olivedrab;
+    border: solid 2px silver;
+    /* background-color: olivedrab; */
 }
 
 .rotors-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: peru;
+    border: solid 2px silver;
+    /* background-color: peru; */
+}
+
+.rotor-selector {
+    border: solid 2px silver;
 }
 
 .lightboard-container {
     grid-area: D;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     /* display: flex;
     justify-content: center; */
-    background-color:dimgray;
+    border: solid 2px silver;
+    /* background-color:dimgray; */
+    background-image: url('https://wallpaperaccess.com/full/3435249.jpg');
+    background-size: cover;
 }
 
 .plugboard-container {
     grid-area: E;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     /* display: flex;
     justify-content: center; */
-    background-color: darkslategrey;
+    border: solid 2px silver;
+    /* background-color: darkslategrey; */
+    background-image: url('https://wallpaperaccess.com/full/4607413.jpg');
+    background-size: cover;
 }
 
 /* .rotor-selector {

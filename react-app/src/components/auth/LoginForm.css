@@ -1,0 +1,41 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+
+input {
+    margin: 5px;
+    display: flex;
+    border: none;
+    border-radius: 3px;
+    height: 20px
+}
+
+.errors {
+    color: red;
+    font-weight: bolder;
+    padding: auto;;
+}
+
+.email-container,
+.password-container,
+.auth-button {
+    padding: 5px
+}
+
+.auth-button {
+    width: 100px;
+    color: white;
+    background-image: url('https://wallpaperaccess.com/full/531249.jpg');
+    background-size: cover;
+    margin-top: 10px;
+    border: solid 2px silver;
+    border-radius: 20px;
+    font-size: large;
+    font-weight: 525;
+    box-shadow: 4px 4px 6px black;
+}

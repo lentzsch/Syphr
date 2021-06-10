@@ -19,3 +19,19 @@
     font-size: xx-large;
     font-weight: 900;
 }
+
+.character-container:hover {
+    color: rgb(246, 213, 64);
+    text-shadow: 0 0 20px rgb(248, 237, 171);
+    /* animation: glow 1s ease-in-out infinite alternate; */
+}
+/* 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 6px 6px 10px #fff, 6px 6px 20px #fff, 6px 6px 30px #e68200, 6px 6px 40px #e68200, 6px 6px 50px #e68200, 6px 6px 60px #e68200, 6px 6px 70px #e68200;
+  }
+  
+  to {
+    text-shadow: 6px 6px 20px #fff, 6px 6px 30px #ffde4d, 6px 6px 40px #ffde4d, 6px 6px 50px #ffde4d, 6px 6px 60px #ffde4d, 6px 6px 70px #ffde4d, 6px 6px 80px #ffde4d;
+  }
+} */
