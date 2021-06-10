@@ -4,3 +4,12 @@
     display: flex;
     justify-content: space-between;
 } */
+
+.rotor-position-select-one,
+.rotor-position-select-two,
+.rotor-position-select-three {
+    box-shadow: inset 2px 2px 4px black;
+    background: linear-gradient( rgba(255, 255, 255), 
+        rgba(0, 0, 0)
+    225%)
+}

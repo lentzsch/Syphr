@@ -3,12 +3,17 @@ from reflector import Reflector
 from plugboard import Plugboard
 
 
-plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
-rotor_one = Rotor('III', 0)
-rotor_two = Rotor('II', 0)
-rotor_three = Rotor('I', 0)
-reflector = Reflector('B')
-def encrypt(message):
+# plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
+# rotor_one = Rotor('III', 0)
+# rotor_two = Rotor('II', 0)
+# rotor_three = Rotor('I', 0)
+# reflector = Reflector('B')
+def encrypt(message, plugboard, rotor_settings, reflector):
+    plugboard = Plugboard(plugboard)
+    rotor_one = Rotor(rotor_settings[0])
+    rotor_two = Rotor(rotor_settings[1])
+    rotor_three = Rotor(rotor_settings[2])
+    reflector = Reflector(reflector)
     # set the reference alphabet and new message.
     alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     new_message = ''
@@ -42,4 +47,4 @@ def encrypt(message):
     return new_message
 
 
-print(encrypt('XKBADDMTDT'))
+print(encrypt('GOODEVENINGALANIHOPETHISMESSAGEFINDSYOUWELLTHISMESSAGEISTOCONFIRMYOUUNDERSTANDHOWTOUSEENIGMA'))

@@ -6,9 +6,9 @@ class Message(db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
     message = db.Column(db.Text, nullable = False)
-    # plugboard_settings = db.Column(db.Array)
-    # rotor_settings = db.Column(db.Array)
-    # reflector_settings = db.Column(db.String)
+    plugboard_settings = db.Column(db.String)
+    rotor_settings = db.Column(db.String)
+    reflector_settings = db.Column(db.String)
     selfDestructDate = db.Column(db.DateTime)
     senderId = db.Column(db.Integer, db.ForeignKey('users.id'))
     conversationId = db.Column(db.Integer, db.ForeignKey('conversations.id'))
@@ -20,9 +20,9 @@ class Message(db.Model):
         return {
             "id": self.id,
             "message": self.message,
-            # "plugboard_settings": self.plugboard_settings,
-            # "rotor_settings": self.rotor_settings,
-            # "reflector_settings": self.reflector_settings,
+            "plugboard_settings": self.plugboard_settings,
+            "rotor_settings": self.rotor_settings,
+            "reflector_settings": self.reflector_settings,
             "selfDestructDate": self.selfDestructDate,
             "senderId": self.senderId,
             "createdAt": self.createdAt,

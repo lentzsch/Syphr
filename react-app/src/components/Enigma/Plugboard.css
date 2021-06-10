@@ -12,10 +12,21 @@
     height: 100%;
 }
 
-.plug-socket {
+.plug-socket-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: medium;
     font-weight: 900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.plug-socket {
+    height: 18px;
+    width: 18px;
+    background: black;
+    border: solid 2px silver;
+    border-radius: 100px;
+    margin-top: 5px;
 }
