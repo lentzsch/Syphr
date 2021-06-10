@@ -16,12 +16,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: xx-large;
     font-weight: 900;
+    height: 50px;
+    width: 50px;
+    border-radius: 200px;
+    margin: 8px;
+    background-image: url('https://wallpaperaccess.com/full/1866719.jpg');
+    background-size: cover;
+    box-shadow: inset 2px 2px 4px black;
 }
 
 .character-container:hover {
-    color: rgb(246, 213, 64);
+    color: rgb(241, 224, 124);
     text-shadow: 0 0 20px rgb(248, 237, 171);
     /* animation: glow 1s ease-in-out infinite alternate; */
 }
