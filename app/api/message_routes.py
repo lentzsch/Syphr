@@ -27,5 +27,5 @@ def encrypt_message():
     # plugboard = data['plugboard']
     # rotors = data['rotors']
     # reflector = data['reflector']
-    encrypted_message = encrypt(message)
-    return {'message': encrypted_message}
+    translated_message = encrypt(message)
+    return {'translatedMessage': translated_message}

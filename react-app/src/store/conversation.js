@@ -45,6 +45,8 @@ export const getAllConversationsWith = (userId) => async (dispatch) => {
     dispatch(searchResults(data))
 }
 
+/**************************  */
+
 
 const initialState = { current: null, searchResults: {}, searchedUser: null }
 
