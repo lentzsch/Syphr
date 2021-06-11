@@ -4,14 +4,14 @@ import './Reflector.css'
 const Reflector = () => {
     return (
         <div className="reflector">
-            <div>
-                <h1>A</h1>
+            <div className="reflector-selection-container">
+                <button className="reflector-selection-a">A</button>
             </div>
-            <div>
-                <h1>B</h1>
+            <div className="reflector-selection-container">
+                <button className="reflector-selection-b">B</button>
             </div>
-            <div>
-                <h1>C</h1>
+            <div className="reflector-selection-container">
+                <button className="reflector-selection-c">C</button>
             </div>
         </div>
     )
