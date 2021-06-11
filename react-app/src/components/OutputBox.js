@@ -11,6 +11,13 @@ const OutputBox = () => {
         setMessage(outputMessage)
     },[outputMessage])
 
+    // const clearMessage = (event) => {
+    //     event.preventDefault()
+    //     if (message) {
+    //         setMessage('')
+    //     }
+    // }
+
     return (
         <div className="output-box-container">
             <div className="output-box">
@@ -27,6 +34,7 @@ const OutputBox = () => {
                     onFocus={() => textareaRef.current.blur()}
                 />
                 <button className="enigma-send-button" type="submit">Send</button>
+                {/* <button className="enigma-send-button" type="submit" onClick={clearMessage}>Clear</button> */}
             </div>
         </div>
     )
