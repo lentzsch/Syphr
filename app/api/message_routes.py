@@ -18,14 +18,13 @@ def get_conversation(partnerId):
 
 ########################## ENCRYPT/DECRYPT A MESSAGE #########################
 @message_routes.route('/encrypt', methods=['POST'])
-# @login_required
+@login_required
 def encrypt_message():
     data = request.json
-    print("REQUEST ------->", request)
-    print("DATA ------>", data)
+    # print("REQUEST ------->", request)
+    # print("DATA ------>", data)
     message = data['message']
-    # plugboard = data['plugboard']
-    # rotors = data['rotors']
-    # reflector = data['reflector']
-    translated_message = encrypt(message)
+    settings = data['settings']
+    # print("SETTINGS ------->", settings['plugboard'])
+    translated_message = encrypt(message, settings)
     return {'translatedMessage': translated_message}

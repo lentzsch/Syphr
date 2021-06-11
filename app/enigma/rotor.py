@@ -13,7 +13,8 @@ class Rotor:
         self.sequence = ''
         self.notch = ''
         self.set_rotor()
-
+        
+        print("NAME: ", self.name, " POSITION: ", self.position)
     
     def set_rotor(self):
         rotors = {
