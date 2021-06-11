@@ -1,19 +1,25 @@
-from rotor import Rotor
-from reflector import Reflector
-from plugboard import Plugboard
+from app.enigma.plugboard import Plugboard
+from app.enigma.rotor import Rotor
+from app.enigma.reflector import Reflector
 
 
-# plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
-# rotor_one = Rotor('III', 0)
-# rotor_two = Rotor('II', 0)
-# rotor_three = Rotor('I', 0)
-# reflector = Reflector('B')
-def encrypt(message, plugboard, rotor_settings, reflector):
-    plugboard = Plugboard(plugboard)
-    rotor_one = Rotor(rotor_settings[0])
-    rotor_two = Rotor(rotor_settings[1])
-    rotor_three = Rotor(rotor_settings[2])
-    reflector = Reflector(reflector)
+
+# plugboard = [(0, 3), (4, 5), (6, 7)]
+# rotor_one = Rotor(json.loads("('III', 0)"))
+# rotor_two = Rotor(json.loads("('II', 0)"))
+# rotor_three = Rotor(json.loads("('I', 0)"))
+# rotors = [('III', 0), ('II', 0), ('I', 0)]
+# reflector = 'B'
+def encrypt(message):
+    plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
+    # rotor_one = Rotor(rotors[0])
+    # rotor_two = Rotor(rotors[1])
+    # rotor_three = Rotor(rotors[2])
+    rotor_one = Rotor('III', 0)
+    rotor_two = Rotor('II', 0)
+    rotor_three = Rotor('I', 0)
+    reflector = Reflector('B')
+
     # set the reference alphabet and new message.
     alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     new_message = ''
@@ -43,8 +49,9 @@ def encrypt(message, plugboard, rotor_settings, reflector):
         idx = plugboard.plugboard_swap(idx)
 
         new_message += alpha[idx]
-
+    
+    print(new_message)
     return new_message
 
 
-print(encrypt('GOODEVENINGALANIHOPETHISMESSAGEFINDSYOUWELLTHISMESSAGEISTOCONFIRMYOUUNDERSTANDHOWTOUSEENIGMA'))
+# encrypt("XKBADDMTDT")
