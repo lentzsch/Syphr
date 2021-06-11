@@ -6,10 +6,7 @@ class Message(db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
     message = db.Column(db.Text, nullable = False)
-    plugboard_settings = db.Column(db.String)
-    rotor_settings = db.Column(db.String)
-    reflector_settings = db.Column(db.String)
-    selfDestructDate = db.Column(db.DateTime)
+    settings = db.Column(db.Text, nullable= False)
     senderId = db.Column(db.Integer, db.ForeignKey('users.id'))
     conversationId = db.Column(db.Integer, db.ForeignKey('conversations.id'))
     createdAt = db.Column(db.DateTime, server_default = db.func.now())
