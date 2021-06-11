@@ -10,15 +10,16 @@ from app.enigma.reflector import Reflector
 # rotor_three = Rotor(json.loads("('I', 0)"))
 # rotors = [('III', 0), ('II', 0), ('I', 0)]
 # reflector = 'B'
-def encrypt(message,):
-    plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
-    # rotor_one = Rotor(rotors[0])
-    # rotor_two = Rotor(rotors[1])
-    # rotor_three = Rotor(rotors[2])
-    rotor_one = Rotor('III', 0)
-    rotor_two = Rotor('II', 0)
-    rotor_three = Rotor('I', 0)
-    reflector = Reflector('B')
+def encrypt(message, settings):
+    print("SETTING ------->", settings)
+    plugboard = Plugboard(settings['plugboard'])
+    rotor_one = Rotor(settings['rotor1']['name'], 
+                      settings['rotor1']['position'] - 1)
+    rotor_two = Rotor(settings['rotor2']['name'],
+                      settings['rotor2']['position'] - 1)
+    rotor_three = Rotor(settings['rotor3']['name'],
+                        settings['rotor3']['position'] - 1)
+    reflector = Reflector(settings['reflector'])
 
     # set the reference alphabet and new message.
     alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

@@ -79,9 +79,9 @@ for (let char of plugboardAlpha) {
     plugboard[char] = char
 }
 
-const rotor1 = { name: 'III', position: 0 }
-const rotor2 = { name: 'II', position: 0 }
-const rotor3 = { name: 'I', position: 0 }
+const rotor1 = { name: 'III', position: 1 }
+const rotor2 = { name: 'II', position: 1 }
+const rotor3 = { name: 'I', position: 1 }
 
 const reflector = 'B'
 
