@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import './TextBoxes.css';
 
 const OutputBox = () => {
+    const [message, setMessage] = useState('')
+    const outputMessage = useSelector(state => state.enigma.outputMessage)
+    const textareaRef = useRef(null)
+    
+    useEffect(() => {
+        setMessage(outputMessage)
+    },[outputMessage])
+
     return (
         <div className="output-box-container">
             <div className="output-box">
@@ -12,6 +21,10 @@ const OutputBox = () => {
                     type="text"
                     placeholder="Encrypted/Decrypted message will appear here. 
                                  Press send to deliver encrypted message."
+                    onChange={() => setMessage(outputMessage)}
+                    value={message}
+                    ref={textareaRef}
+                    onFocus={() => textareaRef.current.blur()}
                 />
                 <button className="enigma-send-button" type="submit">Send</button>
             </div>

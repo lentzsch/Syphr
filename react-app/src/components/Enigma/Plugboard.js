@@ -1,18 +1,33 @@
-import React, { useSate } from 'react';
-import { useSelector } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { setPlugboard } from '../../store/enigma';
 // import PlugCable from './PlugCable'
 import './Plugboard.css'
 
 
 const Plugboard = () => {
+    const dispatch = useDispatch()
     const user = useSelector(state => state.session.user)
+    const plugboardSettings = useSelector(state => state.enigma.plugboard)
     const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
-    const plugboardOutput = {}
-    
-    const handleClick = () => {
-        
+    const [selectedCharacter, setSelectedCharacter] = useState('')
+
+    const handleClick = (char) => (event) => {
+        event.stopPropagation()
+        if (selectedCharacter) {
+            dispatch(setPlugboard(selectedCharacter, char))
+            setSelectedCharacter('')
+        } else {
+            setSelectedCharacter(char)
+        }
     }
 
+    const releasePlug = () => setSelectedCharacter('')
+
+    useEffect(() => {
+        document.addEventListener('click', releasePlug)
+        return () => document.removeEventListener('click', releasePlug)
+    }, [])
 
     return (
         <div className="plugboard">
@@ -24,7 +39,9 @@ const Plugboard = () => {
                         <div className="plug-socket-lable">
                             {char}
                         </div>
-                        <div className="plug-socket" id={char} value={char}/>
+                        <div className="plug-socket" id={char} onClick={handleClick(char)} value={char}>
+                            {plugboardSettings[char]}
+                        </div>
                     </div>
                 )
             })}

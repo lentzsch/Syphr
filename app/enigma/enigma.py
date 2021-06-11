@@ -10,7 +10,7 @@ from app.enigma.reflector import Reflector
 # rotor_three = Rotor(json.loads("('I', 0)"))
 # rotors = [('III', 0), ('II', 0), ('I', 0)]
 # reflector = 'B'
-def encrypt(message):
+def encrypt(message,):
     plugboard = Plugboard([(0, 3), (4, 5), (6, 7)])
     # rotor_one = Rotor(rotors[0])
     # rotor_two = Rotor(rotors[1])
