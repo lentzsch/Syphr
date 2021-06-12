@@ -14,13 +14,31 @@ const Reflector = () => {
     return (
         <div className="reflector">
             <div className="reflector-selection-container">
-                <button className="reflector-selection-a" onClick={onClickReflector('A')}>A</button>
+                <div className="reflector-selection-light">
+                    {   selectedReflector === 'A'
+                        ?<div className="selected-reflector-light" />
+                        : <div/>
+                    }
+                </div>
+                <button className="reflector-selection-button" onClick={onClickReflector('A')}>A</button>
             </div>
             <div className="reflector-selection-container">
-                <button className="reflector-selection-b" onClick={onClickReflector('B')}>B</button>
+                <div className="reflector-selection-light">
+                    {selectedReflector === 'B'
+                        ? <div className="selected-reflector-light" />
+                        : <div />
+                    }
+                </div>
+                <button className="reflector-selection-button" onClick={onClickReflector('B')}>B</button>
             </div>
             <div className="reflector-selection-container">
-                <button className="reflector-selection-c" onClick={onClickReflector('C')}>C</button>
+                <div className="reflector-selection-light">
+                    {selectedReflector === 'C'
+                        ? <div className="selected-reflector-light" />
+                        : <div />
+                    }
+                </div>
+                <button className="reflector-selection-button" onClick={onClickReflector('C')}>C</button>
             </div>
         </div>
     )

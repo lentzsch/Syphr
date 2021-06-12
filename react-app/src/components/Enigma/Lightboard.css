@@ -25,7 +25,7 @@
     margin: 8px;
     background-image: url('https://wallpaperaccess.com/full/1866719.jpg');
     background-size: cover;
-    box-shadow: inset 2px 2px 4px black;
+    box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 3px rgb(223, 223, 223);
 }
 
 .character-container:hover {

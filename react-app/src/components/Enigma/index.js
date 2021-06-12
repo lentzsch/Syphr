@@ -9,15 +9,9 @@ import './index.css';
 const Enigma = () => {
     return (
         <div className="enigma-container">
-            <div className="reflector-container">
-                <Reflector />
-            </div>
-            {/* <div className="rotors-container"> */}
+                <Reflector /> 
                 <Rotors />
-            {/* </div> */}
-            {/* <div> */}
                 <RotorSelector />
-            {/* </div> */}
             <div className="lightboard-container">
                 <Lightboard />
             </div>

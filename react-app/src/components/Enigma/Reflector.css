@@ -1,9 +1,42 @@
 @import './index.css';
 
-.reflector {
+/* .reflector {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
+} */
+
+.reflector-selection-light {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    background-image: url('https://as1.ftcdn.net/jpg/02/35/29/02/500_F_235290264_YBqqklS0gyvr7jGt7wYQrTqPMvkbaz9y.jpg');
+    background-size: contain;
+    margin-bottom: 15px;
+    box-shadow: inset 2px 2px 4px white, inset -2px -2px 4px black;
+}
+
+.selected-reflector-light {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    background-color: rgba(255, 197, 37, 0.253);
+    box-shadow: 0px 0px 20px rgb(255, 208, 0);
+    margin-bottom: 15px;
+}
+
+.reflector-selection-button {
+    height: 30px;
+    width: 30px;
+    background-image: url('https://besthqwallpapers.com/Uploads/9-8-2019/100705/thumb2-polished-steel-texture-silver-metal-background-circle-metal-texture-circle-metal-chrome-texture.jpg');
+    background-size: 40px;
+    background-position-x: center;
+    background-position-y: center;
+    font-size: larger;
+    font-weight: 550;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px 3px black, inset -1px -1px 4px white;
+
 }
