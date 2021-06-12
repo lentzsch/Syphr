@@ -7,7 +7,6 @@ const RotorSelector = () => {
     const dispatch = useDispatch();
     const enigma = useSelector(state => state.enigma)
     const rotors = [enigma.rotor1.name, enigma.rotor2.name, enigma.rotor3.name]
-    console.log("ROTORS ------->", rotors)
 
     const onclick = (name) => (event) => {
         event.stopPropagation()
