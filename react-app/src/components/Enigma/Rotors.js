@@ -23,7 +23,7 @@ const Rotors = () => {
     return (
         <div className="rotors-container">
             <div className="rotor-container-three">
-                <div className="rotor-number-three-container">
+                <div className="rotor-number-container">
                     <h3 onClick={onclickRotorName(3, rotorToSet)}>{rotor3.name}</h3>
                 </div>
                 <div className="rotor-position-select-three-container">
@@ -48,7 +48,7 @@ const Rotors = () => {
                 </div>
             </div>
             <div className="rotor-container-two">
-                <div className="rotor-number-two-container">
+                <div className="rotor-number-container">
                     <h3 onClick={onclickRotorName(2, rotorToSet)}>{rotor2.name}</h3>
                 </div>
                 <div className="rotor-position-select-two-container">
@@ -73,7 +73,7 @@ const Rotors = () => {
                 </div>
             </div>
             <div className="rotor-container-one">
-                <div className="rotor-number-one-container">
+                <div className="rotor-number-container">
                     <h3 onClick={onclickRotorName(1, rotorToSet)}>{rotor1.name}</h3>
                 </div>
                 <div className="rotor-position-select-one-container">

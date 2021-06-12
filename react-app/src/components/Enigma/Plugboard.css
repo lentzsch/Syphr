@@ -29,7 +29,8 @@
     height: 18px;
     width: 18px;
     background: black;
-    border: solid 2px silver;
+    border: solid 2px rgb(192, 192, 192);
     border-radius: 100px;
     margin-top: 5px;
+    box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 1px white, -0.5px -0.5px 1px white, 2px 2px 4px black;
 }

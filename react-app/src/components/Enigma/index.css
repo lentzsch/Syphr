@@ -6,30 +6,34 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30% 1fr  1fr;
     grid-template-areas: 
-    "A B C"
+    "A A A"
     "D D D"
     "E E E";
     width: 800px;
     height: 550px;
-    /* margin: auto; */
-    color: silver;
-    /* background-color:  olive; */
-    /* margin-top: px; */
+    color: rgb(192, 192, 192);
     box-shadow:12px 12px 20px black;
     background-image: url('https://wallpaperaccess.com/full/4607355.jpg');
     background-size: cover;
 }
 
-h1:hover {
+/* h1:hover {
     color: rgb(255, 241, 160);
     text-shadow: 0 0 20px rgb(248, 237, 171);
-}
+} */
 
-.reflector-container {
+
+/* .reflector-container {
     display: flex;
     justify-content: center;
-    border: solid 2px silver;
-    /* background-color: olivedrab; */
+    align-items: center;
+    border: solid 2px rgb(192, 192, 192);
+} */
+.reflector {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 2px rgb(192, 192, 192);
 }
 
 .rotors-container {
@@ -41,6 +45,10 @@ h1:hover {
 }
 
 .rotor-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
     border: solid 2px silver;
 }
 

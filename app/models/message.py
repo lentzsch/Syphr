@@ -1,4 +1,4 @@
-from sqlalchemy.orm import backref
+# from sqlalchemy.orm import backref
 from .db import db
 
 class Message(db.Model):
@@ -17,10 +17,7 @@ class Message(db.Model):
         return {
             "id": self.id,
             "message": self.message,
-            "plugboard_settings": self.plugboard_settings,
-            "rotor_settings": self.rotor_settings,
-            "reflector_settings": self.reflector_settings,
-            "selfDestructDate": self.selfDestructDate,
+            "settings": self.settings,
             "senderId": self.senderId,
             "createdAt": self.createdAt,
             "updatedAt": self.createdAt,

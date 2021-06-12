@@ -5,8 +5,7 @@ class Conversation(db.Model):
     __tablename__ = 'conversations'
 
     id = db.Column(db.Integer, primary_key = True)
-
-    messages = db.relationship('Message', backref="conversation")
+    messages = db.relationship('Message', backref="conversations")
 
     users = db.relationship(
         'User',
