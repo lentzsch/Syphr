@@ -57,7 +57,7 @@ export default function conversationReducer(state=initialState, action) {
         case CURRENT_CONVERSATION:
             return { ...state, current: state.searchResults[action.payload] }
         case CLEAR_SEARCH:
-            return { ...state, searchResults: {} }
+            return { ...state, searchResults: {}, searchedUser: null }
         case SEARCHED_USER:
             return { ...state, searchedUser: action.payload }
         default:

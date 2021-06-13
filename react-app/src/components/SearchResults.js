@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import { useDispatch, useSelector } from  'react-redux';
-import { getAllConversationsWith, currentConversation, searchedUser } from '../store/conversation'
+import { getAllConversationsWith, currentConversation, searchedUser, clearSearch } from '../store/conversation'
 
 const SearchResults = () => {
     const searchResults = useSelector(state => Object.values(state.conversation.searchResults))
@@ -28,6 +28,7 @@ function SingleResult({ result }) {
 
     const onConversationClick = () => {
         dispatch(currentConversation(result.id))
+        dispatch(clearSearch())
     }
 
     if (result.code_name) {

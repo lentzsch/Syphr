@@ -1,15 +1,12 @@
 @import './index.css';
 
-/* .rotors-container {
-    display: flex;
-    justify-content: space-between;
-} */
 
 .rotor-number-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 30px;
+    width: 40px;
     background-color: rgb(255, 255, 255);
     color: black;
     margin-bottom:15px;
@@ -19,7 +16,8 @@
 .rotor-position-select-one,
 .rotor-position-select-two,
 .rotor-position-select-three {
-     box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 3px rgb(223, 223, 223), inset 0px 0px 10px rgb(129, 86, 7);
+    width: 40px;
+    box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 3px rgb(223, 223, 223), inset 0px 0px 10px rgb(129, 86, 7);
     background: linear-gradient( rgba(255, 255, 255), 
         rgba(0, 0, 0)
     225%);
