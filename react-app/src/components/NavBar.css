@@ -9,12 +9,9 @@
 fade {
     position: absolute;
     bottom: 0px;
-
     display: block;
-  
     width: 100%;
     height: 50px;
-  
     background-image: linear-gradient(to bottom, 
         rgba(255, 255, 255, 0), 
         rgba(0, 0, 0, 0.6)
@@ -27,8 +24,6 @@ fade {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: sienna;; */
-
     color: black;
     font-size: xx-large;
     font-weight: 900;
@@ -45,8 +40,6 @@ fade {
     width: fit-content;
     padding-left: 20px;
     margin-right: 20px;
-    /* z-index: 1; */
-    /* position: relative; */
 }
 
 .new-conversation-button,
@@ -61,14 +54,11 @@ fade {
     box-shadow: 4px 4px 6px black;
 }
 
-/* .search-input-button-container {
-    display: flex;
-} */
 .search-field {
     width: 200px;
-    background-image: url('https://i.pinimg.com/originals/39/66/30/396630debcab9795b95203a1abad9a1b.png');
+    /* background-image: url('https://i.pinimg.com/originals/39/66/30/396630debcab9795b95203a1abad9a1b.png'); */
     background-size: cover;
-    box-shadow: -3px -3px 5px rgb(59, 25, 0), 2px 2px 3px rgb(236, 181, 142);
+    box-shadow: -3px -3px 5px rgb(59, 25, 0), 2px 2px 3px rgb(236, 181, 142), inset 0px 0px 6px rgba(187, 127, 16, 0.835);
 }
 
 .results-container {

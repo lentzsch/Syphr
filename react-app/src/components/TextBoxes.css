@@ -16,11 +16,9 @@
 
 .input-box-container {
     grid-area: B;
-    /* margin-left: 10px; */
 }
 .output-box-container {
     grid-area: D;
-    /* margin-right: 10px; */
 }
 .input-box-container,
 .output-box-container {
@@ -54,7 +52,6 @@ textarea {
     color: grey;
     border: dashed grey;
     background: none;
-    /* font-family: rubberstamp; */
     font-size: larger;
     font-weight: 700;
 }
