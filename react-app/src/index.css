@@ -11,13 +11,13 @@ button {
 
 a {
     text-decoration: none;
-    color: rgb(233, 222, 222);
-    text-shadow: -3px -3px 5px rgb(59, 25, 0), 2px 2px 3px rgb(236, 181, 142);
-    /* text-shadow: 2px 2px 4px rgb(44, 18, 3); */
-    /* background-image: linear-gradient(rgb(195, 196, 197) 28%, 
-		rgb(77,77,77) 40%,
-		rgb(211, 214, 216) 54%);
-    -webkit-background-clip:text;
-	-webkit-text-fill-color: transparent; */
+    color: rgb(204, 204, 204);
+    text-shadow: -3px -3px 4px rgb(59, 25, 0), 1.5px 1.5px 4px rgb(236, 181, 142);
+    /* background: linear-gradient(rgb(255, 0, 0) 28%, 
+		rgb(0, 0, 0) 40%,
+		rgb(255, 255, 255) 54%);
+    -webkit-background-clip:text; */
+	/* -webkit-text-fill-color: transparent; */
     /* z-index: 1; */
+   /* color:transparent; */
 }
