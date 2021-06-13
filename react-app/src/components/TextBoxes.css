@@ -61,3 +61,7 @@ textarea {
     color: red;
     border: dashed red;
 }
+
+textarea:focus {
+    outline: none;
+}

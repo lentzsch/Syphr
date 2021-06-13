@@ -27,6 +27,7 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
+      <div className="fade" >
         <div className="syphr-home">
           <NavLink to="/" exact={true} activeClassName="active">
             Syphr
@@ -46,28 +47,12 @@ const NavBar = () => {
         </div> }
         <div className="auth-cluster">
            {!user && <DemoButton /> }
-          {/* <div> */}
            {!user && <LoginFormModal /> }
-            {/* <NavLink to="/login" exact={true} activeClassName="active">
-              Login
-            </NavLink> */}
-          {/* </div>
-          <div> */}
            {!user && <SignupFormModal /> }
-            {/* <NavLink to="/sign-up" exact={true} activeClassName="active">
-              Sign Up
-            </NavLink> */}
-          {/* </div> */}
-          {/* <li>
-            <NavLink to="/users" exact={true} activeClassName="active">
-              Users
-            </NavLink>
-          </li> */}
-          {/* <div> */}
            { user && <LogoutButton /> }
-          {/* </div> */}
        </div>
-       <fade/>
+       </div>
+       {/* <div className="fade"/> */}
     </nav>
   );
 }
