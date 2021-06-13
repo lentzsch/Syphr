@@ -16,7 +16,15 @@ from .seeds import seed_commands
 from .config import Config
 
 app = Flask(__name__)
-socketio = SocketIO(app)
+if os.environ.get("FLASK_ENV") == "production":
+    origins = [
+        "https://syphr.herokuapp.com/",
+        "https://syphr.herokuapp.com/"
+    ]
+else:
+    origins = "*"
+
+socketio = SocketIO(cors_allowed_origins=origins)
 
 if __name__ == '__main__':
     socketio.run(app)
