@@ -8,6 +8,7 @@ const SET_ROTOR_2_POSITION = './enigma/SET_ROTOR_2_POSITION'
 const SET_ROTOR_3_NAME = './enigma/SET_ROTOR_3_NAME'
 const SET_ROTOR_3_POSITION = './enigma/SET_ROTOR_3_POSITION'
 const SET_REFLECTOR = './enigma/SET_REFLECTOR'
+const SET_CURRENT_CHAR = './enigma/SET_CURRENT_CHAR'
 
 export const setPlugboard = (char1, char2) => ({
     type: SET_PLUGBOARD,
@@ -52,10 +53,17 @@ export const setReflector = (setting) => ({
     payload: setting
 })
 
+export const setCurrentChar = (char) => ({
+    type: SET_CURRENT_CHAR,
+    payload: char
+})
+
 const outputMessage = (message) => ({
     type: OUTPUT_MESSAGE,
     payload: message
 })
+
+
 
  
 /************************* ENCRYPT MESSAGE **************************/
@@ -85,7 +93,7 @@ const rotor3 = { name: 'I', position: 1 }
 
 const reflector = 'B'
 
-const initialState = { plugboard, rotorToSet: '', rotor1, rotor2, rotor3, reflector, outputMessage: ''}
+const initialState = { plugboard, rotorToSet: '', rotor1, rotor2, rotor3, reflector, currentChar: '', outputMessage: ''}
 
 export default function plugboardReducer(state=initialState, action) {
     switch (action.type) {
@@ -109,6 +117,8 @@ export default function plugboardReducer(state=initialState, action) {
             return { ...state, rotor3: { ...state.rotor3, position: action.payload }}
         case SET_REFLECTOR:
             return { ...state, reflector: action.payload }
+        case SET_CURRENT_CHAR:
+            return { ...state, currentChar: action.payload }
         case OUTPUT_MESSAGE:
             return { ...state, outputMessage: action.payload }
         default:

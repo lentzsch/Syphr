@@ -1,22 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
+import { setCurrentChar } from '../store/enigma';
 import './TextBoxes.css';
 
 const OutputBox = () => {
+    const dispatch = useDispatch()
     const [message, setMessage] = useState('')
     const outputMessage = useSelector(state => state.enigma.outputMessage)
+    const currentChar = useSelector(state => state.enigma.currentChar)
     const textareaRef = useRef(null)
     
+    let translatedMessage = ''
+    const iterateMessage = () => {
+        for (let i = 0; i < outputMessage.length; i++) {
+            (function (i) {
+                setTimeout(async function () {
+                    await dispatch(setCurrentChar(outputMessage[i]), []);
+                    translatedMessage += outputMessage[i]
+                    setMessage(translatedMessage)
+                }, 1000 * i);
+            })(i);
+        }
+    }
+    
     useEffect(() => {
-        setMessage(outputMessage)
-    },[outputMessage])
+        iterateMessage(outputMessage)
+        dispatch(setCurrentChar(''), [])
+    },[outputMessage, translatedMessage])
 
-    // const clearMessage = (event) => {
-    //     event.preventDefault()
-    //     if (message) {
-    //         setMessage('')
-    //     }
-    // }
 
     return (
         <div className="output-box-container">
@@ -28,7 +39,7 @@ const OutputBox = () => {
                     type="text"
                     placeholder="Encrypted/Decrypted message will appear here. 
                                  Press send to deliver encrypted message."
-                    onChange={() => setMessage(outputMessage)}
+                    onChange={() => setMessage(translatedMessage)}
                     value={message}
                     ref={textareaRef}
                     onFocus={() => textareaRef.current.blur()}

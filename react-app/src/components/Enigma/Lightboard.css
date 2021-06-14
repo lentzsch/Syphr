@@ -12,6 +12,7 @@
     height: 100%;
 }
 
+.character-container-currentChar,
 .character-container {
     display: flex;
     justify-content: center;
@@ -28,7 +29,7 @@
     box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 3px rgb(223, 223, 223);
 }
 
-.character-container:hover {
+.character-container-currentChar {
     color: rgb(255, 241, 160);
     text-shadow: 0 0 20px rgb(248, 237, 171);
     /* animation: glow 1s ease-in-out infinite alternate; */
