@@ -18,7 +18,7 @@ const OutputBox = () => {
                     await dispatch(setCurrentChar(outputMessage[i]), []);
                     translatedMessage += outputMessage[i]
                     setMessage(translatedMessage)
-                }, 1000 * i);
+                }, 500 * i);
             })(i);
         }
     }
