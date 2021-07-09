@@ -11,7 +11,7 @@ from app.enigma.reflector import Reflector
 # rotors = [('III', 0), ('II', 0), ('I', 0)]
 # reflector = 'B'
 def encrypt(message, settings):
-    print("SETTING ------->", settings)
+    # print("SETTING ------->", settings)
     plugboard = Plugboard(settings['plugboard'])
     rotor_one = Rotor(settings['rotor1']['name'], 
                       settings['rotor1']['position'] - 1)

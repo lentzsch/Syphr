@@ -60,6 +60,7 @@ textarea {
 .enigma-send-button:hover {
     color: red;
     border: dashed red;
+    cursor: pointer;
 }
 
 textarea:focus {

@@ -15,7 +15,7 @@ class Rotor:
         self.set_rotor()
         
         print("NAME: ", self.name, " POSITION: ", self.position)
-    
+    # all eight rotors defined in case I want to expand to change to a four rotor enigma
     def set_rotor(self):
         rotors = {
                 "I":    ["EKMFLGDQVZNTOWYHXUSPAIBRCJ", ["R"], ["Q"]],

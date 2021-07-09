@@ -2,6 +2,7 @@ const CURRENT_CONVERSATION = "conversation/CURRENT_CONVERSATION";
 const SEARCH_RESULTS = "conversation/SEARCH_RESULTS";
 const CLEAR_SEARCH = "conversation/CLEAR_SEARCH";
 const SEARCHED_USER = "conversation/SEARCHED_USER";
+const HANDLE_MESSAGES = "conversation/HANDLE_MESSAGES";
 
 export const currentConversation = (conversationId) => ({
     type: CURRENT_CONVERSATION,
@@ -17,10 +18,16 @@ export const searchedUser = (userId) => ({
     payload: userId
 })
 
+export const handleMessages = (message) => ({
+    type: HANDLE_MESSAGES,
+    payload: message
+})
+
 const searchResults = (results) => ({
     type: SEARCH_RESULTS,
     payload: results
 })
+
 
 /**************************** SEARCH CODENAMES ******************************/
 export const searchCodeNames = (codeName) => async (dispatch) => {
@@ -45,10 +52,16 @@ export const getAllConversationsWith = (userId) => async (dispatch) => {
     dispatch(searchResults(data))
 }
 
-/**************************  */
+/***************************** HANDLE SOCKET MESSAGES ***************************/
+// export const handleSocketMessages = (message) => async (dispatch) => {
+//         socket = io();
+//         socket.on('message', (message) => {
+
+//         })
+// }
 
 
-const initialState = { current: null, searchResults: {}, searchedUser: null }
+const initialState = { current: null, searchResults: {}, searchedUser: null,  }
 
 export default function conversationReducer(state=initialState, action) {
     switch (action.type) {
@@ -60,6 +73,8 @@ export default function conversationReducer(state=initialState, action) {
             return { ...state, searchResults: {}, searchedUser: null }
         case SEARCHED_USER:
             return { ...state, searchedUser: action.payload }
+        case HANDLE_MESSAGES:
+            return { ...state, current: { ...state.current, messages: [...state.current.messages,  action.payload] } }
         default:
             return state;
     }

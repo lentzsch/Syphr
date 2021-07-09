@@ -5,8 +5,10 @@
     width: 1000px;
     height: 250px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: flex-start; */
     background-color: lightslategray;
+    overflow-y: scroll;
     margin: auto;
     padding: 10px;
     background-image: url('https://images.freeimages.com/images/large-previews/72b/old-paper-1180145.jpg');
