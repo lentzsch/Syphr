@@ -17,6 +17,7 @@ else:
 socketio = SocketIO(cors_allowed_origins=origins)
 
 @socketio.on('message')
+@login_required
 def handle_message(message_dict):
     if current_user.is_authenticated:
         new_message = Message(**message_dict, sender=current_user)

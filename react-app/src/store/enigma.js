@@ -9,6 +9,7 @@ const SET_ROTOR_3_NAME = './enigma/SET_ROTOR_3_NAME'
 const SET_ROTOR_3_POSITION = './enigma/SET_ROTOR_3_POSITION'
 const SET_REFLECTOR = './enigma/SET_REFLECTOR'
 const SET_CURRENT_CHAR = './enigma/SET_CURRENT_CHAR'
+const CLEAR_OUTPUT_MESSAGE = './enigma/CLEAR_OUTPUT_MESSAGE'
 
 export const setPlugboard = (char1, char2) => ({
     type: SET_PLUGBOARD,
@@ -56,6 +57,10 @@ export const setReflector = (setting) => ({
 export const setCurrentChar = (char) => ({
     type: SET_CURRENT_CHAR,
     payload: char
+})
+
+export const clearOutputMessage = () =>({
+    type: CLEAR_OUTPUT_MESSAGE,
 })
 
 const outputMessage = (message) => ({
@@ -121,6 +126,8 @@ export default function plugboardReducer(state=initialState, action) {
             return { ...state, currentChar: action.payload }
         case OUTPUT_MESSAGE:
             return { ...state, outputMessage: action.payload }
+        case CLEAR_OUTPUT_MESSAGE:
+            return { ...state, outputMessage: null }
         default:
             return state;
     }

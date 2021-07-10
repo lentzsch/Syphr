@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { setCurrentChar } from '../store/enigma';
+import { clearOutputMessage, setCurrentChar } from '../store/enigma';
 import { handleMessages } from '../store/conversation';
 import { io } from 'socket.io-client';
 import './TextBoxes.css';
@@ -10,8 +10,8 @@ let socket;
 const OutputBox = () => {
     const dispatch = useDispatch();
     const [message, setMessage] = useState('');
-    const userId = useSelector(state => state.session.user.id)
-    const userCodeName = useSelector(state => state.session.user.code_name)
+    const userId = useSelector(state => state.session.user?.id)
+    const userCodeName = useSelector(state => state.session.user?.code_name)
     const outputMessage = useSelector(state => state.enigma.outputMessage);
     const conversation = useSelector(state => state.conversation);
     const currentConversation = conversation.current;
@@ -24,15 +24,16 @@ const OutputBox = () => {
         messages = currentConversation.messages
     }
 
+    const outputCopy = outputMessage
     let translatedMessage = ''
     const iterateMessage = () => {
-        for (let i = 0; i < outputMessage.length; i++) {
+        for (let i = 0; i < outputCopy.length; i++) {
             (function (i) {
                 setTimeout(async function () {
-                    await dispatch(setCurrentChar(outputMessage[i]), []);
-                    translatedMessage += outputMessage[i]
+                    await dispatch(setCurrentChar(outputCopy[i]), []);
+                    translatedMessage += outputCopy[i]
                     setMessage(translatedMessage)
-                }, 500 * i);
+                }, 250 * i);
             })(i);
         }
     }
@@ -69,6 +70,7 @@ const OutputBox = () => {
             senderId: userId,
         })
         dispatch(handleMessages(message))
+        // dispatch(clearOutputMessage())
         setMessage('')
     }
 
@@ -88,7 +90,7 @@ const OutputBox = () => {
                     ref={textareaRef}
                     onFocus={() => textareaRef.current.blur()}
                 />
-                <button className="enigma-send-button" type="submit" onClick={sendMessage}>Send</button>
+                {userId && <button className="enigma-send-button" type="submit" onClick={sendMessage}>Send</button>}
                 {/* <button className="enigma-send-button" type="submit" onClick={clearMessage}>Clear</button> */}
             </div>
         </div>

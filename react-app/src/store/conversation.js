@@ -9,6 +9,7 @@ export const currentConversation = (conversationId) => ({
     payload: conversationId
 })
 
+
 export const clearSearch = () => ({
     type: CLEAR_SEARCH
 })
