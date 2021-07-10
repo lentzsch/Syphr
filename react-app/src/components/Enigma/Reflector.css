@@ -38,5 +38,5 @@
     font-weight: 550;
     border-radius: 6px;
     box-shadow: inset 1px 1px 3px black, inset -1px -1px 4px white;
-
+    cursor: pointer;
 }

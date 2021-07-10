@@ -64,6 +64,7 @@
 
 .auth-cluster button {
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .search-field {

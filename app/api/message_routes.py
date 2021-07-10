@@ -8,7 +8,7 @@ from app.enigma import encrypt
 
 message_routes = Blueprint('messages', __name__)
 
-########################## GET A CONVERSATION ######################
+############################# GET A CONVERSATION ##############################
 @message_routes.route('/<int:partnerId>')
 @login_required
 def get_conversation(partnerId):
@@ -16,13 +16,21 @@ def get_conversation(partnerId):
     conversations = list(filter(lambda convo : partnerId in [user.id for user in convo.users], current_user.conversations))
     return {conversation.id: conversation.to_dict() for conversation in conversations}
 
+
+####################### CREATE NEW CONVERSATION ##############################
+@message_routes.route('/<int:partnerId>/new')
+@login_required
+def create_new_conversation(partnerId):
+        new_conversation = Conversation(
+
+        )
+
 ########################## ENCRYPT/DECRYPT A MESSAGE #########################
 @message_routes.route('/encrypt', methods=['POST'])
-@login_required
 def encrypt_message():
     data = request.json
     # print("REQUEST ------->", request)
-    # print("DATA ------>", data)
+    print("DATA ------>", data)
     message = data['message']
     settings = data['settings']
     # print("SETTINGS ------->", settings['plugboard'])
