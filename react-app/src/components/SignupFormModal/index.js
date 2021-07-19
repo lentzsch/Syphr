@@ -5,7 +5,7 @@ import SignupForm from '../auth/SignUpForm';
 
 function SignupFormModal() {
     const [showModal, setShowModal] = useState(false);
-
+    
     return (
         <>
             <button onClick={() => setShowModal(true)}>Sign Up</button>

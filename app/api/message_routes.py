@@ -30,7 +30,7 @@ def create_new_conversation(partnerId):
 def encrypt_message():
     data = request.json
     # print("REQUEST ------->", request)
-    print("DATA ------>", data)
+    # print("DATA ------>", data)
     message = data['message']
     settings = data['settings']
     # print("SETTINGS ------->", settings['plugboard'])

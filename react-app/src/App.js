@@ -7,7 +7,7 @@ import Footer from "./components/Footer"
 import { authenticate } from "./store/session";
 
 function App() {
-  const user = useSelector(state => state.session.user)
+  // const user = useSelector(state => state.session.user)
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
 
