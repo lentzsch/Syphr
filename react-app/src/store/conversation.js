@@ -53,14 +53,6 @@ export const getAllConversationsWith = (userId) => async (dispatch) => {
     dispatch(searchResults(data))
 }
 
-/***************************** HANDLE SOCKET MESSAGES ***************************/
-// export const handleSocketMessages = (message) => async (dispatch) => {
-//         socket = io();
-//         socket.on('message', (message) => {
-
-//         })
-// }
-
 
 const initialState = { current: null, searchResults: {}, searchedUser: null,  }
 

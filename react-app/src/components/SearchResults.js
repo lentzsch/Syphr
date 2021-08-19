@@ -12,6 +12,7 @@ const SearchResults = () => {
                 <SingleResult result={result} />
                 ))}
             {searchedUser && <div className="conversation-search-codenames">
+                <div className="searche-user-codename">{searchedUser.code_name}</div>
                 <button className="new-conversation-button">Start a New Conversation</button>
             </div>}
         </div>
