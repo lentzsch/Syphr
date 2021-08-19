@@ -12,7 +12,7 @@ const Main = () => {
             <InputBox />
             <Enigma />
             <OutputBox />
-            <TutorialModal />
+            {/* <TutorialModal /> */}
         </div>
     )
 }
