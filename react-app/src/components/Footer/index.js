@@ -9,7 +9,7 @@ function Footer() {
             <div className="footer-content-container">
             <div className="footer-links-container">
             <div className="github-link-container">
-                <Link className="github-link" to={{ pathname: "https://github.com/scrub1737" }} target="_blank">
+                <Link className="github-link" to={{ pathname: "https://github.com/lentzsch" }} target="_blank">
                     <i className="fab fa-github"></i>
                 </Link>
             </div>
