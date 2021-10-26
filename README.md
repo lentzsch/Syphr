@@ -10,4 +10,4 @@ If you've seen the movie "The Imitation Game" you can skip this part. The Enigma
 
 ## How Enigma Worked
 
-![Labeled Enigma](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/1280px-EnigmaMachineLabeled.jpeg)
+![Labeled Enigma](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/1280px-EnigmaMachineLabeled.jpeg =500X200)
