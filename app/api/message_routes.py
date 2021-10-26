@@ -19,7 +19,7 @@ def get_conversation(partnerId):
 
 ####################### CREATE NEW CONVERSATION ##############################
 @message_routes.route('/conversation/new', methods=['POST'])
-# @login_required
+@login_required
 def create_new_conversation():
         data=request.json
         userId=data["userId"]
@@ -38,10 +38,7 @@ def create_new_conversation():
 @message_routes.route('/encrypt', methods=['POST'])
 def encrypt_message():
     data = request.json
-    # print("REQUEST ------->", request)
-    # print("DATA ------>", data)
     message = data['message']
     settings = data['settings']
-    # print("SETTINGS ------->", settings['plugboard'])
     translated_message = encrypt(message, settings)
     return {'translatedMessage': translated_message}
