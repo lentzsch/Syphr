@@ -3,12 +3,12 @@ const SEARCH_RESULTS = "conversation/SEARCH_RESULTS";
 const CLEAR_SEARCH = "conversation/CLEAR_SEARCH";
 const SEARCHED_USER = "conversation/SEARCHED_USER";
 const HANDLE_MESSAGES = "conversation/HANDLE_MESSAGES";
+const POST_NEW_CONVERSATION = "conversation/POST_NEW_CONVERSATION"
 
 export const currentConversation = (conversationId) => ({
     type: CURRENT_CONVERSATION,
     payload: conversationId
 })
-
 
 export const clearSearch = () => ({
     type: CLEAR_SEARCH
@@ -27,6 +27,14 @@ export const handleMessages = (message) => ({
 const searchResults = (results) => ({
     type: SEARCH_RESULTS,
     payload: results
+})
+
+const postNewConversation = (userId, partnerId) => ({
+    type: POST_NEW_CONVERSATION,
+    payload: {
+        userId,
+        partnerId
+    }
 })
 
 
@@ -53,13 +61,27 @@ export const getAllConversationsWith = (userId) => async (dispatch) => {
     dispatch(searchResults(data))
 }
 
-/***************************** HANDLE SOCKET MESSAGES ***************************/
-// export const handleSocketMessages = (message) => async (dispatch) => {
-//         socket = io();
-//         socket.on('message', (message) => {
+/***************************** POST NEW CONVERSATION ***************************/
+export const createNewConvserstion = (userId, partnerId) => async (dispatch) => {
+    const response = await fetch('/api/messages/conversation/new', {
+        method: "POST",
+        headers: {
+            'Content-Type': "application/json",
+        },
+        body: JSON.stringify({
+            messages: [],
+            userId,
+            partnerId
+        })
+    })
+    const data = await response.json();
+    if (data.errors) {
+        return data
+    }
 
-//         })
-// }
+    dispatch(postNewConversation(data))
+    return {};
+}
 
 
 const initialState = { current: null, searchResults: {}, searchedUser: null,  }
@@ -76,6 +98,8 @@ export default function conversationReducer(state=initialState, action) {
             return { ...state, searchedUser: action.payload }
         case HANDLE_MESSAGES:
             return { ...state, current: { ...state.current, messages: [...state.current.messages,  action.payload] } }
+        case POST_NEW_CONVERSATION:
+            return { ...state, current: action.payload }
         default:
             return state;
     }

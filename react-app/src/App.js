@@ -7,7 +7,6 @@ import Footer from "./components/Footer"
 import { authenticate } from "./store/session";
 
 function App() {
-  const user = useSelector(state => state.session.user)
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
 
@@ -27,23 +26,6 @@ function App() {
       <NavBar />
       <Main />
       <Footer />
-      {/* <Switch>
-        <Route path="/login" exact={true}>
-          <LoginForm />
-        </Route>
-        <Route path="/sign-up" exact={true}>
-          <SignUpForm />
-        </Route> */}
-        {/* <ProtectedRoute path="/users" exact={true} >
-          <UsersList/>
-        </ProtectedRoute> */}
-        {/* <ProtectedRoute path="/users/:userId" exact={true} >
-          <User />
-        </ProtectedRoute> */}
-        {/* <ProtectedRoute path="/" exact={true} >
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
-      </Switch> */}
     </BrowserRouter>
   );
 }

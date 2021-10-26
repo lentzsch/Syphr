@@ -1,10 +1,16 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useDispatch, useSelector } from  'react-redux';
-import { getAllConversationsWith, currentConversation, searchedUser, clearSearch } from '../store/conversation'
+import { getAllConversationsWith, currentConversation, searchedUser, clearSearch, createNewConvserstion } from '../store/conversation'
 
 const SearchResults = () => {
     const searchResults = useSelector(state => Object.values(state.conversation.searchResults))
     const searchedUser = useSelector(state => state.conversation.searchedUser)
+    const userId = useSelector(state => state.session.user.id)
+    const dispatch =useDispatch();
+    
+    const onNewConversationClick = () => {
+        dispatch(createNewConvserstion(userId, searchedUser))
+    }
 
     return (
         <div className="results-container">
@@ -12,7 +18,7 @@ const SearchResults = () => {
                 <SingleResult result={result} />
                 ))}
             {searchedUser && <div className="conversation-search-codenames">
-                <button className="new-conversation-button">Start a New Conversation</button>
+                <button className="new-conversation-button" onClick={onNewConversationClick}>Start a New Conversation</button>
             </div>}
         </div>
     )
@@ -37,7 +43,7 @@ function SingleResult({ result }) {
                  onClick={onUserClick}
                  >
                      {result.code_name}
-                </div>
+            </div>
         )
     } else {
         return (

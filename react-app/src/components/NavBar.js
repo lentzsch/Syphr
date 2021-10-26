@@ -13,12 +13,10 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("")
   const user = useSelector(state => state.session.user);
-  // const buttonRef = useRef(null)
 
   const onChange = ({ target: { value } }) => {
       setSearch(value)
       if (value) {
-        // buttonRef.current.click()
         dispatch(searchCodeNames(value))
       } else {
         dispatch(clearSearch())
