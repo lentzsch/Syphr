@@ -10,10 +10,11 @@ If you've seen the movie "The Imitation Game" you can skip this part. The Enigma
 
 ## How Enigma Worked
 Enigma consisted of several components that worked together to scramble each character.
+  * A keyboard (input)
   * A plugboard
   * Three to Four rotors
   * A reflector
-  * A lightboard
+  * A lampboard (output)
 
 Example of a vintage Enigma Machine and it's components:
 ![Labeled Enigma](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/1280px-EnigmaMachineLabeled.jpeg)
