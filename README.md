@@ -22,4 +22,7 @@ Example of a vintage Enigma Machine and it's components:
 The keyboard is pretty self explanatory so let start with:
 
 ### The Plugboard
-The plugboard
+The plugboard was very much like old timey telephon operator switch boards. A user would take a wire with plugs on either end and put one plug into one charachter, and the other plug into another. If a charachter input into the plugboard is one of those charachters, that input character would be swaped with the other. For example, if a user put a plug into "A" and connected it to "Q", if "A" came into the board it would out put as "Q" and if a "Q" came into the board it would output as "A".
+
+### The Rotors
+The rotors are the key to how Enigma never encrypted the same character as the same thing twice. Early machines had slots for only three rotors, later machines had four. For our purposes, we will assume a three rotor machine. The user would choose three rotors from a selection of five labled 1-5 in roman numerals. The user would then choose which of the three slots their chosen rotors would go in. As the name implies, the rotors rotate.
