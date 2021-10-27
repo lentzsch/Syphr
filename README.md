@@ -18,3 +18,8 @@ Enigma consisted of several components that worked together to scramble each cha
 
 Example of a vintage Enigma Machine and it's components:
 ![Labeled Enigma](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/1280px-EnigmaMachineLabeled.jpeg)
+
+The keyboard is pretty self explanatory so let start with:
+
+#### The Plugboard
+The plugboard
