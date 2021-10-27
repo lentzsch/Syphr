@@ -21,5 +21,5 @@ Example of a vintage Enigma Machine and it's components:
 
 The keyboard is pretty self explanatory so let start with:
 
-#### The Plugboard
+### The Plugboard
 The plugboard
