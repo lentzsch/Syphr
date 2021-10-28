@@ -28,12 +28,6 @@ def seed_users():
                     password='password')
     db.session.add(tar)
 
-    # tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
-    #                 password='password')
-    # tricycle = User(code_name="Tricycle", email='d.popov@mi6.gov',
-    #                 password='password')
-
-
     db.session.commit()
 
 

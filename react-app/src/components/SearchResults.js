@@ -62,7 +62,7 @@ function SingleResult({ result }) {
                         </div>
                         )
                     };
-                })};
+                })}
             </div>
         );
     };

@@ -16,17 +16,6 @@ from .config import Config
 
 app = Flask(__name__)
 
-# if os.environ.get("FLASK_ENV") == "production":
-#     origins = [
-#         "http://syphr.herokuapp.com/",
-#         "https://syphr.herokuapp.com/"
-#     ]
-# else:
-#     origins = "*"
-
-# socketio = SocketIO(cors_allowed_origins=origins)
-
-
 # Setup login manager
 login = LoginManager(app)
 login.login_view = 'auth.unauthorized'

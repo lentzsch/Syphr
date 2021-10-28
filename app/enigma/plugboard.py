@@ -6,7 +6,7 @@ class Plugboard:
         self.alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         self.config = config
         self.indexConfig = {}
-        # self.config = {}
+        # self.config = {} # For testing.
 
         # convert letters to indicies.
         for char in self.config:
