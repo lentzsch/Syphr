@@ -16,6 +16,6 @@ function LoginFormModal() {
             )}
         </>
     );
-}
+};
 
 export default LoginFormModal;

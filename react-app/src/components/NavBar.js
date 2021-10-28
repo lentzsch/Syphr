@@ -20,8 +20,8 @@ const NavBar = () => {
         dispatch(searchCodeNames(value));
       } else {
         dispatch(clearSearch());
-      }
-  }
+      };
+  };
 
   return (
     <nav className="nav-bar">

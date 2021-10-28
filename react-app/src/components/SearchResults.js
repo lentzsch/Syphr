@@ -13,7 +13,7 @@ const SearchResults = () => {
     
     const onNewConversationClick = () => {
         dispatch(createNewConvserstion(userId, searchedUser));
-    }
+    };
 
     return (
         <div className="results-container">
@@ -24,8 +24,8 @@ const SearchResults = () => {
                 <button className="new-conversation-button" onClick={onNewConversationClick}>Start a New Conversation</button>
             </div>}
         </div>
-    )
-}
+    );
+};
 
 function SingleResult({ result }) {
     const dispatch = useDispatch();
@@ -34,12 +34,12 @@ function SingleResult({ result }) {
     const onUserClick = () => {
         dispatch(getAllConversationsWith(result.id));
         dispatch(searchedUser(result.id));
-    }
+    };
 
     const onConversationClick = () => {
         dispatch(currentConversation(result.id));
         dispatch(clearSearch());
-    }
+    };
 
     if (result.code_name) {
         return (
@@ -49,7 +49,7 @@ function SingleResult({ result }) {
                  >
                      {result.code_name}
             </div>
-        )
+        );
     } else {
         return (
             <div className="conversation-search-container"
@@ -64,7 +64,7 @@ function SingleResult({ result }) {
                     };
                 })};
             </div>
-        )
+        );
     };
 };
 

@@ -10,8 +10,8 @@ let socket;
 const OutputBox = () => {
     const dispatch = useDispatch();
     const [message, setMessage] = useState('');
-    const userId = useSelector(state => state.session.user?.id)
-    const userCodeName = useSelector(state => state.session.user?.code_name)
+    const userId = useSelector(state => state.session.user?.id);
+    const userCodeName = useSelector(state => state.session.user?.code_name);
     const outputMessage = useSelector(state => state.enigma.outputMessage);
     const conversation = useSelector(state => state.conversation);
     const currentConversation = conversation.current;
@@ -34,8 +34,8 @@ const OutputBox = () => {
                     setMessage(translatedMessage);
                 }, 250 * i);
             })(i);
-        }
-    }
+        };
+    };
 
     useEffect (() => {
         socket = io();
@@ -54,7 +54,7 @@ const OutputBox = () => {
     },[outputMessage, translatedMessage]);
 
     const sendMessage = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         let message = {
             message: outputMessage,
             settings: JSON.stringify(settings),
@@ -92,7 +92,7 @@ const OutputBox = () => {
                 {/* <button className="enigma-send-button" type="submit" onClick={clearMessage}>Clear</button> */}
             </div>
         </div>
-    )
+    );
 };
 
 export default OutputBox;

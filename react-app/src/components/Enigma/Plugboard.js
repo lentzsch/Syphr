@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import { setPlugboard } from '../../store/enigma';
 // import PlugCable from './PlugCable';
 import './Plugboard.css';
@@ -46,7 +46,7 @@ const Plugboard = () => {
                         </div>
                     </div>
                 );
-            })};
+            })}
             {/* <PlugCable /> */}
         </div>
     );

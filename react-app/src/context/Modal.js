@@ -11,7 +11,7 @@ export function ModalProvider({ children }) {
 
     useEffect(() => {
         setValue(modalRef.current);
-    }, [])
+    }, []);
 
     return (
         <>
@@ -21,7 +21,7 @@ export function ModalProvider({ children }) {
             <div ref={modalRef} />
         </>
     );
-}
+};
 
 export function Modal({ onClose, children }) {
     const modalNode = useContext(ModalContext);
@@ -36,4 +36,4 @@ export function Modal({ onClose, children }) {
         </div>,
         modalNode
     );
-}
+};

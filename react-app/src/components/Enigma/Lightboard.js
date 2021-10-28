@@ -26,11 +26,11 @@ const Lightboard = () => {
                         >
                             {char}
                         </div>
-                    )
+                    );
                 };
-            })};
+            })}
         </div>
-    )
+    );
 };
 
 export default Lightboard;

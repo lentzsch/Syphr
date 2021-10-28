@@ -12,14 +12,14 @@ const RotorSelector = () => {
         event.stopPropagation();
         if (!rotors.includes(name)) {
             dispatch(setRotorToSet(name));
-        }
-    }
+        };
+    };
 
     const releaseName = () => dispatch(setRotorToSet(''));
 
     useEffect(() => {
         document.addEventListener('click', releaseName);
-        return () => document.removeEventListener('click', releaseName)
+        return () => document.removeEventListener('click', releaseName);
     }, []);
 
     return (

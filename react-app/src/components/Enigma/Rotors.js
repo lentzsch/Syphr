@@ -10,17 +10,17 @@ const Rotors = () => {
     const onclickRotorName = (rotor, rotorToSet) => () => {
         if (rotorToSet){
             dispatch(enigmaActions[`setRotor${rotor}name`](rotorToSet));
-        }
-    }
+        };
+    };
 
     const onChangeRotorPosition = (rotor) => (event) => {
         dispatch(enigmaActions[`setRotor${rotor}position`](+event.target.value));
-    }
+    };
 
     let settings = [];
     for (let i = 1; i < 27; i++) {
         settings.push(i.toString());
-    }
+    };
 
     return (
         <div className="rotors-container">

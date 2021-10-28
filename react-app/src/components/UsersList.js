@@ -27,6 +27,6 @@ function UsersList() {
       <ul>{userComponents}</ul>
     </>
   );
-}
+};
 
 export default UsersList;

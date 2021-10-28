@@ -1,14 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { setReflector } from '../../store/enigma';
-import './Reflector.css'
+import './Reflector.css';
 
 const Reflector = () => {
     const dispatch = useDispatch();
-    const selectedReflector = useSelector(state => state.enigma.reflector)
+    const selectedReflector = useSelector(state => state.enigma.reflector);
 
     const onClickReflector = (setting) => () => {
-        dispatch(setReflector(setting))
+        dispatch(setReflector(setting));
     }
 
     return (
@@ -41,7 +41,7 @@ const Reflector = () => {
                 <button className="reflector-selection-button" onClick={onClickReflector('C')}>C</button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Reflector;

@@ -19,7 +19,7 @@ const Enigma = () => {
                 <Plugboard />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Enigma;

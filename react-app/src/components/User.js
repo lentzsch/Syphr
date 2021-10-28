@@ -7,7 +7,7 @@ function User() {
 
   useEffect(() => {
     if (!userId) {
-      return
+      return;
     }
     (async () => {
       const response = await fetch(`/api/users/${userId}`);
@@ -18,7 +18,7 @@ function User() {
 
   if (!user) {
     return null;
-  }
+  };
 
   return (
     <ul>
@@ -33,5 +33,5 @@ function User() {
       </li>
     </ul>
   );
-}
+};
 export default User;

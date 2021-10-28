@@ -1,6 +1,6 @@
 import React, {useEffect, useRef } from 'react';
 import {useSelector } from 'react-redux';
-import './MessagesBox.css'
+import './MessagesBox.css';
 
 const MessagesBox = () => {
     const messages = useSelector(state => state.conversation.current?.messages); 
@@ -28,7 +28,7 @@ const MessagesBox = () => {
             ))}
             <div ref={messagesEndRef} />
         </div>
-    )
+    );
 };
 
 export default MessagesBox;
