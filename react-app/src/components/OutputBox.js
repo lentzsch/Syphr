@@ -15,7 +15,7 @@ const OutputBox = () => {
     const outputMessage = useSelector(state => state.enigma.outputMessage);
     const conversation = useSelector(state => state.conversation);
     const currentConversation = conversation.current;
-    const currentChar = useSelector(state => state.enigma.currentChar)
+    // const currentChar = useSelector(state => state.enigma.currentChar)
     const settings = useSelector(state => state.enigma)
     const textareaRef = useRef(null)
 

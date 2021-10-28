@@ -11,7 +11,7 @@ import './NavBar.css';
 
 const NavBar = () => {
   const dispatch = useDispatch();
-  const [search, setSearch] = useState("")
+  const [_, setSearch] = useState("")//Adjust so only need setSearch
   const user = useSelector(state => state.session.user);
 
   const onChange = ({ target: { value } }) => {

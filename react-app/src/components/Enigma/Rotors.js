@@ -4,7 +4,8 @@ import * as enigmaActions from '../../store/enigma';
 import './Rotors.css';
 
 const Rotors = () => {
-    //LOOK INTO BUG WHERE NO LONGER ABLE TO SELCT ROTORS IF ROTOR NAMES ARE CLICKED WITH NO ROTOR TO SET
+    //TODO: 
+        //LOOK INTO BUG WHERE NO LONGER ABLE TO SELCT ROTORS IF ROTOR NAMES ARE CLICKED WITH NO ROTOR TO SET
     const dispatch = useDispatch()
     const { rotor1, rotor2, rotor3, rotorToSet } = useSelector(state => state.enigma)
 

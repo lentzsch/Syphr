@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from  'react-redux';
 import { getAllConversationsWith, currentConversation, searchedUser, clearSearch, createNewConvserstion } from '../store/conversation'
 

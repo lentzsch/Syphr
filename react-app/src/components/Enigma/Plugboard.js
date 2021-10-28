@@ -4,6 +4,8 @@ import { setPlugboard } from '../../store/enigma';
 // import PlugCable from './PlugCable'
 import './Plugboard.css'
 
+//TO DO:
+    //Plugboard currently allows the same character to occupy the value in two different key value pairs.
 
 const Plugboard = () => {
     const dispatch = useDispatch()
