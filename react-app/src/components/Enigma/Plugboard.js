@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { setPlugboard } from '../../store/enigma';
-// import PlugCable from './PlugCable'
-import './Plugboard.css'
+// import PlugCable from './PlugCable';
+import './Plugboard.css';
 
 //TO DO:
     //Plugboard currently allows the same character to occupy the value in two different key value pairs.
 
 const Plugboard = () => {
-    const dispatch = useDispatch()
-    const plugboardSettings = useSelector(state => state.enigma.plugboard)
-    const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
-    const [selectedCharacter, setSelectedCharacter] = useState('')
+    const dispatch = useDispatch();
+    const plugboardSettings = useSelector(state => state.enigma.plugboard);
+    const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('');
+    const [selectedCharacter, setSelectedCharacter] = useState('');
 
     const handleClick = (char) => (event) => {
-        event.stopPropagation()
+        event.stopPropagation();
         if (selectedCharacter) {
-            dispatch(setPlugboard(selectedCharacter, char))
-            setSelectedCharacter('')
+            dispatch(setPlugboard(selectedCharacter, char));
+            setSelectedCharacter('');
         } else {
-            setSelectedCharacter(char)
+            setSelectedCharacter(char);
         }
     }
 
-    const releasePlug = () => setSelectedCharacter('')
+    const releasePlug = () => setSelectedCharacter('');
 
     useEffect(() => {
-        document.addEventListener('click', releasePlug)
-        return () => document.removeEventListener('click', releasePlug)
-    }, [])
+        document.addEventListener('click', releasePlug);
+        return () => document.removeEventListener('click', releasePlug);
+    }, []);
 
     return (
         <div className="plugboard">
@@ -45,11 +45,11 @@ const Plugboard = () => {
                             {plugboardSettings[char]}
                         </div>
                     </div>
-                )
-            })}
+                );
+            })};
             {/* <PlugCable /> */}
         </div>
-    )
-}
+    );
+};
 
 export default Plugboard;

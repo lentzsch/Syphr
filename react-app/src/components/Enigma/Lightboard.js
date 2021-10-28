@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './Lightboard.css'
+import './Lightboard.css';
 
 const Lightboard = () => {
-    const currentChar = useSelector(state => state.enigma.currentChar)
-    const lightboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
+    const currentChar = useSelector(state => state.enigma.currentChar);
+    const lightboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('');
 
     return (
         <div className="lightboard">
@@ -27,10 +27,10 @@ const Lightboard = () => {
                             {char}
                         </div>
                     )
-                }
-            })}
+                };
+            })};
         </div>
     )
-}
+};
 
 export default Lightboard;
