@@ -12,6 +12,7 @@ const Lightboard = () => {
                 if (char === currentChar) {
                     return (
                         <div className="character-container-currentChar lightboard"
+                            key={char}
                             style={{ gridPosition: char }}
                         >
                             {char}
@@ -20,6 +21,7 @@ const Lightboard = () => {
                 } else {
                     return (
                         <div className="character-container lightboard"
+                            key={`position-${char}`}
                             style={{ gridPosition: char }}
                         >
                             {char}
