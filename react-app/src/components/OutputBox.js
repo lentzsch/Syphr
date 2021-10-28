@@ -90,7 +90,7 @@ const OutputBox = () => {
                     ref={textareaRef}
                     onFocus={() => textareaRef.current.blur()}
                 />
-                {userId && <button className="enigma-send-button" type="submit" onClick={sendMessage}>Send</button>}
+                {userId && currentConversation && <button className="enigma-send-button" type="submit" onClick={sendMessage}>Send</button>}
                 {/* <button className="enigma-send-button" type="submit" onClick={clearMessage}>Clear</button> */}
             </div>
         </div>
