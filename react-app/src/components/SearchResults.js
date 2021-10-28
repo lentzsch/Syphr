@@ -2,6 +2,9 @@ import React from 'react';
 import { useDispatch, useSelector } from  'react-redux';
 import { getAllConversationsWith, currentConversation, searchedUser, clearSearch, createNewConvserstion } from '../store/conversation'
 
+
+//TO DO:
+    //Change cursor from text to arrow or finger.
 const SearchResults = () => {
     const searchResults = useSelector(state => Object.values(state.conversation.searchResults))
     const searchedUser = useSelector(state => state.conversation.searchedUser)
@@ -26,6 +29,7 @@ const SearchResults = () => {
 
 function SingleResult({ result }) {
     const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user)
 
     const onUserClick = () => {
         dispatch(getAllConversationsWith(result.id))
@@ -49,11 +53,15 @@ function SingleResult({ result }) {
         return (
             <div className="conversation-search-container"
                  onClick={onConversationClick}>
-                {result.users.map((user) => (
-                    <div className="conversation-search-codenames">
-                        {user.code_name}
-                    </div>
-                ))}
+                {result.users.map((user) => {
+                    if (user.code_name !== sessionUser.code_name) {
+                        return(
+                        <div className="conversation-search-codenames">
+                            {user.code_name}
+                        </div>
+                        )
+                    }
+                })}
             </div>
         )
     }
