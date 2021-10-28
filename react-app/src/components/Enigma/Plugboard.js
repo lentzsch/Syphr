@@ -7,7 +7,7 @@ import './Plugboard.css'
 
 const Plugboard = () => {
     const dispatch = useDispatch()
-    const user = useSelector(state => state.session.user)
+    // const user = useSelector(state => state.session.user)
     const plugboardSettings = useSelector(state => state.enigma.plugboard)
     const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
     const [selectedCharacter, setSelectedCharacter] = useState('')
@@ -34,12 +34,13 @@ const Plugboard = () => {
             {plugboardAlpha.map((char) => {
                 return (
                     <div className="plug-socket-container"
-                          style={{ gridPosition: char}}
+                         key={`${char}-socket-container`}
+                         style={{ gridPosition: char}}
                     >
-                        <div className="plug-socket-lable">
+                        <div className="plug-socket-lable" key={`${char}-socket-lable`}>
                             {char}
                         </div>
-                        <div className="plug-socket" id={char} onClick={handleClick(char)} value={char}>
+                        <div className="plug-socket" id={`${char}-socket`} key={char} onClick={handleClick(char)} value={char}>
                             {plugboardSettings[char]}
                         </div>
                     </div>
