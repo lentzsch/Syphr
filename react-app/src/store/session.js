@@ -9,7 +9,7 @@ const setUser = (user) => ({
 
 const removeUser = () => ({
     type: REMOVE_USER,
-})
+});
 
 const initialState = { user: null };
 
@@ -22,10 +22,10 @@ export const authenticate = () => async (dispatch) => {
     const data = await response.json();
     if (data.errors) {
         return;
-    }
+    };
     
-    dispatch(setUser(data))
-  }
+    dispatch(setUser(data));
+  };
   
   export const login = (email, password) => async (dispatch)  => {
     const response = await fetch('/api/auth/login', {
@@ -41,11 +41,11 @@ export const authenticate = () => async (dispatch) => {
     const data = await response.json();
     if (data.errors) {
         return data;
-    }
+    };
     
     dispatch(setUser(data))
     return {};
-  }
+  };
   
   export const logout = () => async (dispatch) => {
     const response = await fetch("/api/auth/logout", {
@@ -74,11 +74,11 @@ export const authenticate = () => async (dispatch) => {
     const data = await response.json();
     if (data.errors) {
         return data;
-    }
+    };
     
     dispatch(setUser(data))
     return {};
-  }
+  };
 
 export default function reducer(state=initialState, action) {
     switch (action.type) {
@@ -88,5 +88,5 @@ export default function reducer(state=initialState, action) {
             return {user: null}
         default:
             return state;
-    }
-}
+    };
+};

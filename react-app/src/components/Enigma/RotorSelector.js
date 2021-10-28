@@ -5,22 +5,22 @@ import './RotorSelector.css';
 
 const RotorSelector = () => {
     const dispatch = useDispatch();
-    const enigma = useSelector(state => state.enigma)
-    const rotors = [enigma.rotor1.name, enigma.rotor2.name, enigma.rotor3.name]
+    const enigma = useSelector(state => state.enigma);
+    const rotors = [enigma.rotor1.name, enigma.rotor2.name, enigma.rotor3.name];
 
     const onclick = (name) => (event) => {
-        event.stopPropagation()
+        event.stopPropagation();
         if (!rotors.includes(name)) {
-            dispatch(setRotorToSet(name))
+            dispatch(setRotorToSet(name));
         }
     }
 
-    const releaseName = () => dispatch(setRotorToSet(''))
+    const releaseName = () => dispatch(setRotorToSet(''));
 
     useEffect(() => {
-        document.addEventListener('click', releaseName)
+        document.addEventListener('click', releaseName);
         return () => document.removeEventListener('click', releaseName)
-    }, [])
+    }, []);
 
     return (
         <div className="rotor-selector">
@@ -59,7 +59,7 @@ const RotorSelector = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default RotorSelector;

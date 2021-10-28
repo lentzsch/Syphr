@@ -4,22 +4,22 @@ import * as enigmaActions from '../../store/enigma';
 import './Rotors.css';
 
 const Rotors = () => {
-    const dispatch = useDispatch()
-    const { rotor1, rotor2, rotor3, rotorToSet } = useSelector(state => state.enigma)
+    const dispatch = useDispatch();
+    const { rotor1, rotor2, rotor3, rotorToSet } = useSelector(state => state.enigma);
 
     const onclickRotorName = (rotor, rotorToSet) => () => {
         if (rotorToSet){
-            dispatch(enigmaActions[`setRotor${rotor}name`](rotorToSet))
+            dispatch(enigmaActions[`setRotor${rotor}name`](rotorToSet));
         }
     }
 
     const onChangeRotorPosition = (rotor) => (event) => {
-        dispatch(enigmaActions[`setRotor${rotor}position`](+event.target.value))
+        dispatch(enigmaActions[`setRotor${rotor}position`](+event.target.value));
     }
 
     let settings = [];
     for (let i = 1; i < 27; i++) {
-        settings.push(i.toString())
+        settings.push(i.toString());
     }
 
     return (
@@ -44,8 +44,8 @@ const Rotors = () => {
                                 >
                                     {setting}
                                 </option>
-                            )
-                        })}
+                            );
+                        })};
                     </select>
                 </div>
             </div>
@@ -69,7 +69,7 @@ const Rotors = () => {
                                 >
                                     {setting}
                                 </option>
-                            )
+                            );
                         })}
                     </select>
                 </div>
@@ -94,13 +94,13 @@ const Rotors = () => {
                                 >
                                     {setting}
                                 </option>
-                            )
+                            );
                         })}
                     </select>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Rotors;

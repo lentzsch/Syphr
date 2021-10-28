@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import DemoButton from './auth/DemoButton'
+import DemoButton from './auth/DemoButton';
 import LogoutButton from './auth/LogoutButton';
 import LoginFormModal from './LoginFormModal';
 import SignupFormModal from './SignupFormModal';
-import { clearSearch, searchCodeNames } from '../store/conversation'
-import SearchResults from './SearchResults'
+import { clearSearch, searchCodeNames } from '../store/conversation';
+import SearchResults from './SearchResults';
 import './NavBar.css';
 
 const NavBar = () => {
   const dispatch = useDispatch();
-  const [_, setSearch] = useState("")//Adjust so only need setSearch
+  const [_, setSearch] = useState("");
   const user = useSelector(state => state.session.user);
 
   const onChange = ({ target: { value } }) => {
-      setSearch(value)
+      setSearch(value);
       if (value) {
-        dispatch(searchCodeNames(value))
+        dispatch(searchCodeNames(value));
       } else {
-        dispatch(clearSearch())
+        dispatch(clearSearch());
       }
   }
 
@@ -53,6 +53,6 @@ const NavBar = () => {
        {/* <div className="fade"/> */}
     </nav>
   );
-}
+};
 
 export default NavBar;

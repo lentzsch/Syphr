@@ -1,8 +1,8 @@
 import React from 'react';
-import MessagesBox from './MessagesBox'
-import InputBox from './InputBox'
-import Enigma from './Enigma'
-import OutputBox from './OutputBox'
+import MessagesBox from './MessagesBox';
+import InputBox from './InputBox';
+import Enigma from './Enigma';
+import OutputBox from './OutputBox';
 
 
 const Main = () => {
@@ -13,7 +13,7 @@ const Main = () => {
             <Enigma />
             <OutputBox />
         </div>
-    )
-}
+    );
+};
 
 export default Main
