@@ -10,7 +10,9 @@ const RotorSelector = () => {
 
     const onclick = (name) => (event) => {
         event.stopPropagation()
-        dispatch(setRotorToSet(name))
+        if (!rotors.includes(name)) {
+            dispatch(setRotorToSet(name))
+        }
     }
 
     const releaseName = () => dispatch(setRotorToSet(''))
