@@ -9,7 +9,6 @@ import './Plugboard.css'
 
 const Plugboard = () => {
     const dispatch = useDispatch()
-    // const user = useSelector(state => state.session.user)
     const plugboardSettings = useSelector(state => state.enigma.plugboard)
     const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
     const [selectedCharacter, setSelectedCharacter] = useState('')
