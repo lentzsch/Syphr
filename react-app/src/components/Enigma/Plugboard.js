@@ -12,10 +12,26 @@ const Plugboard = () => {
     const plugboardSettings = useSelector(state => state.enigma.plugboard);
     const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('');
     const [selectedCharacter, setSelectedCharacter] = useState('');
+    const [charToRevert, setCharToRevert] = useState('')
 
     const handleClick = (char) => (event) => {
         event.stopPropagation();
-        if (selectedCharacter) {
+
+        if (!selectedCharacter && plugboardSettings[char] !== char) {
+            console.log('No selected char and plugboardsetting != char')
+            console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
+            setCharToRevert(plugboardSettings[char]);
+            console.log(charToRevert)
+            setSelectedCharacter(char);
+        } else if (charToRevert) {
+            console.log("selected char and char to revert")
+            console.log("char to revert: ", charToRevert)
+            dispatch(setPlugboard(selectedCharacter, char));
+            dispatch(setPlugboard(charToRevert, charToRevert))
+            setSelectedCharacter('');
+        } else if (selectedCharacter) {
+            console.log("seleceted char")
+            console.log(charToRevert)
             dispatch(setPlugboard(selectedCharacter, char));
             setSelectedCharacter('');
         } else {
@@ -41,7 +57,7 @@ const Plugboard = () => {
                         <div className="plug-socket-lable" key={`${char}-socket-lable`}>
                             {char}
                         </div>
-                        <div className="plug-socket" id={`${char}-socket`} key={char} onClick={handleClick(char)} value={char}>
+                        <div className="plug-socket" id={`${char}-socket`} key={char} onClick={handleClick(plugboardSettings[char])} value={char}>
                             {plugboardSettings[char]}
                         </div>
                     </div>

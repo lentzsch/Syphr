@@ -85,12 +85,12 @@ export const encryptMessage = (message, settings) => async (dispatch) => {
     dispatch(outputMessage(translatedMessage));
 };
 
-/*********************** PLUGBOARD DEFAULT ********************/
+/*********************** PLUGBOARD DEFAULT ************************/
 const plugboardAlpha = 'QWERTZUIOASDFGHJKPYXCVBNML'.split('')
 const plugboard = {};
 for (let char of plugboardAlpha) {
     plugboard[char] = char;
-}
+};
 
 const rotor1 = { name: 'III', position: 1 };
 const rotor2 = { name: 'II', position: 1 };
@@ -98,9 +98,10 @@ const rotor3 = { name: 'I', position: 1 };
 
 const reflector = 'B';
 
+/*************************** REDUCER ****************************/
 const initialState = { plugboard, rotorToSet: '', rotor1, rotor2, rotor3, reflector, currentChar: '', outputMessage: ''};
 
-export default function plugboardReducer(state=initialState, action) {
+export default function plugboardReducer(state=initialState, action) {//rename to enigma reducer
     switch (action.type) {
         case SET_PLUGBOARD:
             state.plugboard[action.char1] = action.char2;
