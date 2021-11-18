@@ -3,15 +3,17 @@ from app.enigma.rotor import Rotor
 from app.enigma.reflector import Reflector
 
 
-
+################# SETTINGS BELOW FOR TESTING PURPOSES ###################
 # plugboard = [(0, 3), (4, 5), (6, 7)]
 # rotor_one = Rotor(json.loads("('III', 0)"))
 # rotor_two = Rotor(json.loads("('II', 0)"))
 # rotor_three = Rotor(json.loads("('I', 0)"))
 # rotors = [('III', 0), ('II', 0), ('I', 0)]
 # reflector = 'B'
+
+#################### ENIGMA ENCRYPTION FUNCTION ###################
 def encrypt(message, settings):
-    # print("SETTING ------->", settings)
+    # Grab Enigma settings.
     plugboard = Plugboard(settings['plugboard'])
     rotor_one = Rotor(settings['rotor1']['name'], 
                       settings['rotor1']['position'] - 1)

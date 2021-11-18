@@ -22,6 +22,8 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.plug-socket-selected,
+.plug-socket-swapped,
 .plug-socket {
     display: flex;
     justify-content: center;
@@ -34,4 +36,14 @@
     border-radius: 100px;
     margin-top: 5px;
     box-shadow: inset 2px 2px 4px black, inset -0.5px -0.5px 1px white, -0.5px -0.5px 1px white, 2px 2px 4px black;
+}
+
+.plug-socket-selected {
+    color: rgb(250, 205, 108);
+    text-shadow: 0 0 20px rgb(224, 194, 113);
+}
+
+.plug-socket-swapped {
+    color: rgba(231, 214, 137, 0.938);
+    text-shadow: 0 0 20px rgba(214, 200, 142, 0.945);
 }

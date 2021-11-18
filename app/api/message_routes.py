@@ -1,7 +1,7 @@
-from app.forms.message_encryption_form import MessageEncryptionForm
-from flask import Blueprint, session, request
+# from app.forms.message_encryption_form import MessageEncryptionForm
+from flask import Blueprint, request
 from flask_login import current_user, login_required
-from app.models import Message, Conversation, User, db
+from app.models import Conversation, User, db
 from app.enigma import encrypt
 
 

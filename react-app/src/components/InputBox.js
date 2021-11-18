@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { encryptMessage } from '../store/enigma'
+import { useDispatch, useSelector } from 'react-redux';
+import { encryptMessage } from '../store/enigma';
 import './TextBoxes.css';
 
 const InputBox = () => {
-    const dispatch = useDispatch()
-    const [message, setMessage] = useState('')
-    const [isFormatted, setIsFormatted] = useState(false)
-    const enigma = useSelector(state => state.enigma)
+    const dispatch = useDispatch();
+    const [message, setMessage] = useState('');
+    const [isFormatted, setIsFormatted] = useState(false);
+    const enigma = useSelector(state => state.enigma);
     
-    const formatMessage = (message) => message.replace(/[^a-zA-Z]/g, '').toUpperCase()
+    const formatMessage = (message) => message.replace(/[^a-zA-Z]/g, '').toUpperCase();
     
     const handleClick = () => {
         if (message) {
-            setMessage(message => formatMessage(message))
-            setIsFormatted(true)
-        }
-    }
+            setMessage(message => formatMessage(message));
+            setIsFormatted(true);
+        };
+    };
 
     const handleTranslate = () => {
-        dispatch(encryptMessage(message, enigma))
-        setIsFormatted(false)
-    }
+        dispatch(encryptMessage(message, enigma));
+        setIsFormatted(false);
+    };
 
     return (
         <div className="input-box-container">
@@ -41,7 +41,7 @@ const InputBox = () => {
                 }
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default InputBox;

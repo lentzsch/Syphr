@@ -1,3 +1,5 @@
+//NOT IN USE YET
+
 import React from 'react';
 import { gsap, TweenLite } from "gsap/dist/gsap";
 import { Draggable } from "gsap/dist/Draggable";
@@ -5,10 +7,10 @@ import { Draggable } from "gsap/dist/Draggable";
 gsap.registerPlugin(Draggable);
 
 const PlugCable = () => {
-    // var bezierWeight = 0.675;
+    // const bezierWeight = 0.675;
 
-    // var handles = document.querySelectorAll(".handle");
-    // var path = document.querySelector(".path");
+    // let handles = document.querySelectorAll(".handle");
+    // let path = document.querySelector(".path");
     // const [handle]
 
 
@@ -39,7 +41,7 @@ const PlugCable = () => {
         let data = `M${x1},${y1} C${x2},${y2} ${x3},${y3} ${x4},${y4}`;
 
         path.setAttribute("d", data);
-    }
+    };
 
     return (
         <svg id="svg">
@@ -47,7 +49,7 @@ const PlugCable = () => {
             <circle className="handle" cx="0" cy="0" r="8" />
             <circle className="handle" cx="0" cy="0" r="8" />
         </svg>
-    )
-}
+    );
+};
 
 export default PlugCable;

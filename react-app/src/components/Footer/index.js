@@ -1,7 +1,7 @@
 // frontend/src/components/Footer/index.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css'
+import './Footer.css';
 
 function Footer() {
     return (
@@ -21,7 +21,7 @@ function Footer() {
             </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;

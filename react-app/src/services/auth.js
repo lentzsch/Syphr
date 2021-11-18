@@ -5,7 +5,7 @@ export const authenticate = async() => {
     }
   });
   return await response.json();
-}
+};
 
 export const login = async (email, password) => {
   const response = await fetch('/api/auth/login', {
@@ -19,7 +19,7 @@ export const login = async (email, password) => {
     })
   });
   return await response.json();
-}
+};
 
 export const logout = async () => {
   const response = await fetch("/api/auth/logout", {
@@ -44,4 +44,4 @@ export const signUp = async (code_name, email, password) => {
     }),
   });
   return await response.json();
-}
+};

@@ -1,9 +1,9 @@
 import React from 'react';
-import MessagesBox from './MessagesBox'
-import InputBox from './InputBox'
-import Enigma from './Enigma'
-import OutputBox from './OutputBox'
-import TutorialModal from './TutorialModal';
+import MessagesBox from './MessagesBox';
+import InputBox from './InputBox';
+import Enigma from './Enigma';
+import OutputBox from './OutputBox';
+
 
 const Main = () => {
     return (
@@ -12,9 +12,8 @@ const Main = () => {
             <InputBox />
             <Enigma />
             <OutputBox />
-            {/* <TutorialModal /> */}
         </div>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

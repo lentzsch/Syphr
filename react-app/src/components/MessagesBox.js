@@ -1,26 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { ReactDOM } from 'react';
-import './MessagesBox.css'
+import React, {useEffect, useRef } from 'react';
+import {useSelector } from 'react-redux';
+import './MessagesBox.css';
 
 const MessagesBox = () => {
-    // const conversation = useSelector(state => state.conversation);
-    const messages = useSelector(state => state.conversation.current?.messages);
-    // const dispatch = useDispatch()
-    // console.log("MESSAGES IN BOX ------->", messages)
-    // const [message, setMessages] = useState[]
-    // useEffect(() =>{
-    //     dispatch(currentConversation(currentConvo))
-    // }, [currentConvo])
-    
-    const messagesEndRef = useRef(null)
+    const messages = useSelector(state => state.conversation.current?.messages); 
+    const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
 
     useEffect(() => {
-        scrollToBottom()
+        scrollToBottom();
     }, [messages]);
 
     return (
@@ -37,7 +28,7 @@ const MessagesBox = () => {
             ))}
             <div ref={messagesEndRef} />
         </div>
-    )
-}
+    );
+};
 
 export default MessagesBox;
