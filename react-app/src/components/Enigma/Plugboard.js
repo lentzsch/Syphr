@@ -21,34 +21,34 @@ const Plugboard = () => {
         }
 
         if (!selectedCharacter && plugboardSettings[char] !== char) {
-            console.log('No selected char and plugboardsetting != char')
-            console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            console.log("char to revert: ", charToRevert)
-            console.log("Selected char: ", selectedCharacter)
+            // console.log('No selected char and plugboardsetting != char')
+            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
+            // console.log("char to revert: ", charToRevert)
+            // console.log("Selected char: ", selectedCharacter)
             setCharToRevert(plugboardSettings[char]);
             console.log(charToRevert)
             setSelectedCharacter(char);
         } else if (selectedCharacter && charToRevert) {
-            console.log("selected char and char to revert")
-            console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            console.log("char to revert: ", charToRevert)
-            console.log("Selected char: ", selectedCharacter)
+            // console.log("selected char and char to revert")
+            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
+            // console.log("char to revert: ", charToRevert)
+            // console.log("Selected char: ", selectedCharacter)
             dispatch(setPlugboard(selectedCharacter, char));
             dispatch(setPlugboard(charToRevert, charToRevert));
             setSelectedCharacter('');
             setCharToRevert('')
         } else if (selectedCharacter) {
-            console.log("seleceted char")
-            console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            console.log("char to revert: ", charToRevert)
-            console.log("Selected char: ", selectedCharacter)
+            // console.log("seleceted char")
+            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
+            // console.log("char to revert: ", charToRevert)
+            // console.log("Selected char: ", selectedCharacter)
             dispatch(setPlugboard(selectedCharacter, char));
             setSelectedCharacter('');
         } else {
-            console.log("else")
-            console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            console.log("char to revert: ", charToRevert)
-            console.log("Selected char: ", selectedCharacter)
+            // console.log("else")
+            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
+            // console.log("char to revert: ", charToRevert)
+            // console.log("Selected char: ", selectedCharacter)
             setSelectedCharacter(char);
         }
     }
