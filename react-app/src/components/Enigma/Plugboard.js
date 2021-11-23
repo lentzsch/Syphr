@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPlugboard } from '../../store/enigma';
-// import PlugCable from './PlugCable';
 import './Plugboard.css';
-
-//TO DO:
-    //Plugboard currently allows the same character to occupy the value in two different key value pairs.
 
 const Plugboard = () => {
     const dispatch = useDispatch();
@@ -21,34 +17,18 @@ const Plugboard = () => {
         }
 
         if (!selectedCharacter && plugboardSettings[char] !== char) {
-            // console.log('No selected char and plugboardsetting != char')
-            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            // console.log("char to revert: ", charToRevert)
-            // console.log("Selected char: ", selectedCharacter)
             setCharToRevert(plugboardSettings[char]);
             console.log(charToRevert)
             setSelectedCharacter(char);
         } else if (selectedCharacter && charToRevert) {
-            // console.log("selected char and char to revert")
-            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            // console.log("char to revert: ", charToRevert)
-            // console.log("Selected char: ", selectedCharacter)
             dispatch(setPlugboard(selectedCharacter, char));
             dispatch(setPlugboard(charToRevert, charToRevert));
             setSelectedCharacter('');
             setCharToRevert('')
         } else if (selectedCharacter) {
-            // console.log("seleceted char")
-            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            // console.log("char to revert: ", charToRevert)
-            // console.log("Selected char: ", selectedCharacter)
             dispatch(setPlugboard(selectedCharacter, char));
             setSelectedCharacter('');
         } else {
-            // console.log("else")
-            // console.log('Plugboard settings char: ', plugboardSettings[char], " char: ", char)
-            // console.log("char to revert: ", charToRevert)
-            // console.log("Selected char: ", selectedCharacter)
             setSelectedCharacter(char);
         }
     }
@@ -87,7 +67,6 @@ const Plugboard = () => {
                     </div>
                 );
             })}
-            {/* <PlugCable /> */}
         </div>
     );
 };
