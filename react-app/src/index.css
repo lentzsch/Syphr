@@ -13,11 +13,4 @@ a {
     text-decoration: none;
     color: rgb(204, 204, 204);
     text-shadow: -3px -3px 4px rgb(59, 25, 0), 1.5px 1.5px 4px rgb(236, 181, 142);
-    /* background: linear-gradient(rgb(255, 0, 0) 28%, 
-		rgb(0, 0, 0) 40%,
-		rgb(255, 255, 255) 54%);
-    -webkit-background-clip:text; */
-	/* -webkit-text-fill-color: transparent; */
-    /* z-index: 1; */
-   /* color:transparent; */
 }
