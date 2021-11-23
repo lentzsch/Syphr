@@ -1,34 +1,12 @@
-
-form {
+.welcome-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 10px; */
+    max-width: 600px;
 }
 
-
-input {
-    margin: 5px;
-    display: flex;
-    border: none;
-    border-radius: 3px;
-    height: 20px
-}
-
-.errors {
-    color: red;
-    font-weight: bolder;
-    padding: auto;;
-}
-
-.email-container,
-.password-container,
-.auth-button {
-    padding: 5px
-}
-
-.auth-button {
-    width: 100px;
+.welcome-button {
+    width: 225px;
     color: white;
     background-image: url('https://wallpaperaccess.com/full/531249.jpg');
     background-size: cover;
