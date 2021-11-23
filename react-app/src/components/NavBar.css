@@ -94,4 +94,5 @@
 .conversation-search-container {
     border-top: solid 2px black;
     margin: 10px;
+    cursor: pointer;
 }

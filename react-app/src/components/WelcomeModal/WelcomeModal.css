@@ -16,4 +16,5 @@
     font-size: large;
     font-weight: 525;
     box-shadow: 4px 4px 6px black;
+    cursor: pointer;
 }
