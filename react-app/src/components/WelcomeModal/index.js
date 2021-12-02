@@ -19,7 +19,7 @@ function WelcomeModal() {
                     </p>
                     <p>
                         In an unfortunate case of "well, it works on my machine", there appears to be a potential extreme delay between
-                        requests and responses of up to 17 full seconds. This is clearly unacceptable. It appears to potentially be an issue
+                        requests and responses of up to 17 full seconds, especially in Chrome. This is clearly unacceptable. It appears to potentially be an issue
                         with Heroku's dynos. I will be looking into alternative options over the holidays. Sorry for
                         any inconvenience.
                     </p>
