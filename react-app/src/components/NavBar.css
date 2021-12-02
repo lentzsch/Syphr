@@ -59,7 +59,6 @@
     font-size: large;
     font-weight: 525;
     box-shadow: 4px 4px 6px black;
-    z-index: 1;
 }
 
 .auth-cluster button {
