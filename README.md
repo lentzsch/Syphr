@@ -22,7 +22,7 @@ Example of a vintage Enigma Machine and it's components:
 The keyboard is pretty self explanatory so lets start with:
 
 ### The Plugboard
-The plugboard was very much like old timey telephon operator switch boards. A user would take a wire with plugs on either end and put one plug into one charachter, and the other plug into another. If a charachter input into the plugboard is one of those charachters, that input character would be swaped with the other. For example, if a user put a plug into "A" and connected it to "Q", if "A" came into the board it would out put as "Q" and if a "Q" came into the board it would output as "A".
+The plugboard was very much like old timey telephon operator switch boards. A user would take a wire with plugs on either end and put one plug into one charachter, and the other plug into another. If a charachter input into the plugboard is one of those charachters, that input character would be swaped with the other. For example, if a user put a plug into "A" and connected it to "Q", if "A" came into the board it would out put as "Q" and if a "Q" came into the board it would output as "A". The machine came with eleven plug cables.
 
 ### The Rotors
 
@@ -35,3 +35,15 @@ The rotors are the key to how Enigma never encrypted the same character as the s
 As the name implies, the rotors rotate. The signal moved through the rotors from right to left. With each key press, the right most rotor would rotate by one position. Each rotor had a notch on it at a certain position so that would cause the rotor to its left to rotate by one position. This means that for every full turn of the rotor, the rotor to it's left would rotate, exactly like an odometer. This is how an input of "AAAAA" could come out as "TNDSK".
 
 ### The Reflector
+
+The reflector is how no letter could be encoded as itself which ultimately proved to be the achilles heel of the Enigma Machine. Turing's Bombe exploited this fact by comparing text that would likly be in the message such as "weather report" to the message itself. This helped them narrow down the number of possible setting combinations to something more reasonable.
+
+The reflector was very simpble. Much like the rotors, input charachters were mapped to output characters and as the name implies, the reflector reflected the signal to go back through the mechine all over again before lighting up the light board. There were three reflectors to choose from.
+
+### The Lampboard
+
+The lampboard displayed all twenty-six characters of the alphabet. With each key press, the light board would light up the encoded character and the operator would write it down.
+
+### Bringing it all together
+
+Each day, the operator would reacieve the settings for that day. They would set the plugbord, insert the chosen rotors, rotate the rotors to the appropriate position, insert the reflector, close the machine up, and get ready to type. to encode a message, they would type it letter by letter. With each keystroke, the right most rotor would rotate, then a signal would pass through the plugboard potentially changing the character, then through the first rotor changing that character, then the second changing again, the third, changing again, bounce off the reflector changing again, back through the third rotor changing again, the second rotor changing again, the first changing again, the plugboard potentially chaging again, and finally lighting up the final encrypted character on the lampboard. The operator would then write that character down. Decoding worked the same way. Because of the nature of how Enigma encrypted messages, you could decode the massage by puting it through the macine with the same settings it was encrypted in. So if you input "AAAAA" and got "TNDSK", inputting "TNDSK" would get you "AAAAA".
