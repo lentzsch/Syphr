@@ -12,7 +12,7 @@ If you've seen the movie "The Imitation Game" you can skip this part. The Enigma
 Enigma consisted of several components that worked together to scramble each character.
   * A keyboard (input)
   * A plugboard
-  * Three to Four rotors
+  * Three to four rotors
   * A reflector
   * A lampboard (output)
 
