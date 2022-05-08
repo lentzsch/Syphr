@@ -29,4 +29,4 @@ The rotors are the key to how Enigma never encrypted the same character as the s
 
 ![Deconstructed Rotor](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/rotor_deconstructed.jpeg?raw=true)
 
-As the name implies, the rotors rotate.
+As the name implies, the rotors rotate. The signal moved through the rotors from right to left. With each key press, the right most rotor would rotate by one position. Each rotor had a notch on it at a certain position so that would cause the rotor to its left to rotate by one position. This means that for every full turn of the rotor, the rotor to it's left would rotate, exactly like an odometer. This is how an input of "AAAAA" could come out as "TNDSK".
