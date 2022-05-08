@@ -19,10 +19,14 @@ Enigma consisted of several components that worked together to scramble each cha
 Example of a vintage Enigma Machine and it's components:
 ![Labeled Enigma](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/1280px-EnigmaMachineLabeled.jpeg)
 
-The keyboard is pretty self explanatory so let start with:
+The keyboard is pretty self explanatory so lets start with:
 
 ### The Plugboard
 The plugboard was very much like old timey telephon operator switch boards. A user would take a wire with plugs on either end and put one plug into one charachter, and the other plug into another. If a charachter input into the plugboard is one of those charachters, that input character would be swaped with the other. For example, if a user put a plug into "A" and connected it to "Q", if "A" came into the board it would out put as "Q" and if a "Q" came into the board it would output as "A".
 
 ### The Rotors
-The rotors are the key to how Enigma never encrypted the same character as the same thing twice. Early machines had slots for only three rotors, later machines had four. For our purposes, we will assume a three rotor machine. The user would choose three rotors from a selection of five labled 1-5 in roman numerals. The user would then choose which of the three slots their chosen rotors would go in. As the name implies, the rotors rotate.
+The rotors are the key to how Enigma never encrypted the same character as the same thing twice. Early machines had slots for only three rotors, later machines had four. For our purposes, we will assume a three rotor machine. The user would choose three rotors from a selection of five labled 1-5 in roman numerals. The user would then choose which of the three slots their chosen rotors would go in. The rotors had twenty-six positions representing the twenty-six letters of the alphabet. Each position had an electrical contact ond the left and on the right. A wire would connect the contact on one side of position with the contact on the other side of and other posiction. For example, the left contact of position 1 might be wired tot he right contact of position 15. As the signal passed through the rotor, this served to add one more change to the input character.
+
+![Deconstructed Rotor](https://github.com/lentzsch/Syphr/blob/main/react-app/public/images/rotor_deconstructed.jpeg?raw=true)
+
+As the name implies, the rotors rotate.
