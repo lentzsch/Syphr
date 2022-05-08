@@ -38,7 +38,7 @@ As the name implies, the rotors rotate. The signal moved through the rotors from
 
 The reflector is how no letter could be encoded as itself which ultimately proved to be the achilles heel of the Enigma Machine. Turing's Bombe exploited this fact by comparing text that would likly be in the message such as "weather report" to the message itself. This helped them narrow down the number of possible setting combinations to something more reasonable.
 
-The reflector was very simpble. Much like the rotors, input charachters were mapped to output characters and as the name implies, the reflector reflected the signal to go back through the mechine all over again before lighting up the light board. There were three reflectors to choose from.
+The reflector was very simpble. Much like the rotors, input charachters were mapped to output characters and as the name implies, the reflector reflected the signal back through the mechine all over again before lighting up the light board. There were three reflectors to choose from.
 
 ### The Lampboard
 
