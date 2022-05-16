@@ -11,7 +11,7 @@ const InputBox = () => {
     
     const formatMessage = (message) => message.replace(/[^a-zA-Z]/g, '').toUpperCase();
     
-    const handleClick = () => {
+    const handleFormat = () => {
         if (message) {
             setMessage(message => formatMessage(message));
             setIsFormatted(true);
@@ -37,7 +37,7 @@ const InputBox = () => {
                     />
                 { isFormatted
                 ?<button className="enigma-encrypt-button" onClick={handleTranslate}>Encrypt/Decrypt</button>
-                :<button className="enigma-encrypt-button" onClick={handleClick}>Format Message</button>
+                :<button className="enigma-encrypt-button" onClick={handleFormat}>Format Message</button>
                 }
             </div>
         </div>
