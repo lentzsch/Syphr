@@ -38,14 +38,16 @@ const OutputBox = () => {
     };
 
     useEffect (() => {
-        socket = io();
-        
-        socket.on('message', (outputMessage) => {
-            dispatch(handleMessages(currentConversation.messages.push(outputMessage)));
-        })
-        return (() => {
-            socket.disconnect();
-        })
+        if (socket == undefined){
+            socket = io();
+
+            socket.on('message', (outputMessage) => {
+                dispatch(handleMessages(currentConversation.messages.push(outputMessage)));
+            })
+            return (() => {
+                socket.disconnect();
+            })
+        }
     }, [])
     
     useEffect(() => {
