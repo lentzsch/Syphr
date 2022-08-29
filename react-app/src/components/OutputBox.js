@@ -44,9 +44,9 @@ const OutputBox = () => {
             socket.on('message', (outputMessage) => {
                 dispatch(handleMessages(currentConversation.messages.push(outputMessage)));
             })
-            // return (() => {
-            //     socket.disconnect();
-            // })
+            return (() => {
+                socket.disconnect();
+            })
         }
     }, [])
     
