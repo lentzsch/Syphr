@@ -19,7 +19,6 @@ const MessagesBox = () => {
 
     const handleTranslate = (message, enigma) => {
         // const outputMessage = useSelector(state => state.enigma.outputMessage);
-        console.log("HIIIIIIIIIIIIIII ,", message, enigma)
         dispatch(encryptMessage(message, enigma));
 
     };
