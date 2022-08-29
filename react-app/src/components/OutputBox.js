@@ -44,9 +44,9 @@ const OutputBox = () => {
             socket.on('message', (outputMessage) => {
                 dispatch(handleMessages(currentConversation.messages.push(outputMessage)));
             })
-            return (() => {
-                socket.disconnect();
-            })
+            // return (() => {
+            //     socket.disconnect();
+            // })
         }
     }, [])
     
@@ -56,22 +56,22 @@ const OutputBox = () => {
     },[outputMessage, translatedMessage]);
 
     const sendMessage = (e) => {
-        // e.preventDefault();
-        // let message = {
-        //     message: outputMessage,
-        //     settings: JSON.stringify(settings),
-        //     conversationId: currentConversation?.id,
-        //     senderId: userId,
-        //     senderCodeName: userCodeName
-        // };
-        // socket.emit('message', {
-        //     message: outputMessage,
-        //     settings: JSON.stringify(settings),
-        //     conversationId: currentConversation?.id,
-        //     senderId: userId,
-        // });
-        // dispatch(handleMessages(message));
-        // setMessage('');
+        e.preventDefault();
+        let message = {
+            message: outputMessage,
+            settings: JSON.stringify(settings),
+            conversationId: currentConversation?.id,
+            senderId: userId,
+            senderCodeName: userCodeName
+        };
+        socket.emit('message', {
+            message: outputMessage,
+            settings: JSON.stringify(settings),
+            conversationId: currentConversation?.id,
+            senderId: userId,
+        });
+        dispatch(handleMessages(message));
+        setMessage('');
     }
 
 
