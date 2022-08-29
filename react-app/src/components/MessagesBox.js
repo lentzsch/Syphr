@@ -30,7 +30,7 @@ const MessagesBox = () => {
                     <div className="sender-code-name">
                         {message.senderCodeName}
                     </div>
-                    <div className="message-box" onClick={handleTranslate(message.message, message.settings)}>
+                    <div className="message-box" onClick={() => handleTranslate(message.message, message.settings)}>
                         {message.message}
                     </div>
                 </div>
