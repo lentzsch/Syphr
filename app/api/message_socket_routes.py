@@ -5,7 +5,7 @@ import os
 
 if os.environ.get("FLASK_ENV") == "production":
     origins = [
-        "http://syphr.herokuapp.com/",
+        # "http://syphr.herokuapp.com/",
         "https://syphr.herokuapp.com/"
     ]
 else:
