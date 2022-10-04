@@ -39,7 +39,7 @@ const OutputBox = () => {
 
     useEffect (() => {
         if (socket == undefined){
-            socket = io();
+            socket = io('', { transports: ['websocket'] });
 
             socket.on('message', (outputMessage) => {
                 dispatch(handleMessages(currentConversation.messages.push(outputMessage)));
