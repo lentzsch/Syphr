@@ -31,6 +31,9 @@ def upgrade():
     sa.UniqueConstraint('code_name'),
     sa.UniqueConstraint('email')
     )
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 

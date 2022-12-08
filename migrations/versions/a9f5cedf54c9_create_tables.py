@@ -24,6 +24,9 @@ def upgrade():
     op.add_column('messages', sa.Column('plugboard_settings', sa.ARRAY(sa.String()), nullable=True))
     op.add_column('messages', sa.Column('reflector_settings', sa.String(), nullable=True))
     op.add_column('messages', sa.Column('rotor_settings', sa.ARRAY(sa.String()), nullable=True))
+
+    # if environment == "production":
+    #     op.execute(f"ALTER TABLE <table_name> SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 

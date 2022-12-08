@@ -36,6 +36,9 @@ def upgrade():
     op.drop_constraint('messages_recieverId_fkey', 'messages', type_='foreignkey')
     op.create_foreign_key(None, 'messages', 'conversations', ['conversationId'], ['id'])
     op.drop_column('messages', 'recieverId')
+
+    if environment == "production":
+        op.execute(f"ALTER TABLE conversations SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 
