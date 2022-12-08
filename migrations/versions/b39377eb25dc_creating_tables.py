@@ -8,6 +8,9 @@ Create Date: 2021-06-08 13:54:54.976886
 from alembic import op
 import sqlalchemy as sa
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
 revision = 'b39377eb25dc'
@@ -21,6 +24,9 @@ def upgrade():
     op.add_column('messages', sa.Column('createdAt', sa.DateTime(), server_default=sa.text('now()'), nullable=True))
     op.add_column('messages', sa.Column('updatedAt', sa.DateTime(), server_default=sa.text('now()'), nullable=True))
     # ### end Alembic commands ###
+
+    # if environment == "production":
+    #     op.execute(f"ALTER TABLE <table_name> SET SCHEMA {SCHEMA};")
 
 
 def downgrade():

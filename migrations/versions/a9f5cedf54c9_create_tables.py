@@ -8,6 +8,9 @@ Create Date: 2021-06-10 08:37:48.073571
 from alembic import op
 import sqlalchemy as sa
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
 
 # revision identifiers, used by Alembic.
 revision = 'a9f5cedf54c9'
@@ -21,6 +24,9 @@ def upgrade():
     op.add_column('messages', sa.Column('plugboard_settings', sa.ARRAY(sa.String()), nullable=True))
     op.add_column('messages', sa.Column('reflector_settings', sa.String(), nullable=True))
     op.add_column('messages', sa.Column('rotor_settings', sa.ARRAY(sa.String()), nullable=True))
+
+    # if environment == "production":
+    #     op.execute(f"ALTER TABLE <table_name> SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
 
 

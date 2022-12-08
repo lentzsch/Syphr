@@ -1,3 +1,4 @@
+from app.models.db import db, environment, SCHEMA
 from app.seeds.conversations import seed_conversations, undo_conversations
 from app.seeds.messages import seed_messages, undo_messages
 from flask.cli import AppGroup
@@ -10,6 +11,15 @@ seed_commands = AppGroup('seed')
 # Creates the `flask seed all` command
 @seed_commands.command('all')
 def seed():
+    if environment == 'production':
+        # Before seeding, truncate all tables prefixed with schema name
+        db.session.execute(
+            f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
+        db.session.execute(
+            f"TRUNCATE table {SCHEMA}.conversations RESTART IDENTITY CASCADE;")
+        db.session.execute(
+            f"TRUNCATE table {SCHEMA}.messages RESTART IDENTITY CASCADE;")
+        db.session.commit()
     seed_users()
     seed_conversations()
     seed_messages()
