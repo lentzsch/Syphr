@@ -1,5 +1,5 @@
 # from sqlalchemy.orm import backref
-from .db import db
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 
 class Message(db.Model):
     __tablename__ = 'messages'
