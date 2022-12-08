@@ -14,7 +14,7 @@ class Rotor:
         self.notch = ''
         self.set_rotor()
         
-        print("NAME: ", self.name, " POSITION: ", self.position)
+        # print("NAME: ", self.name, " POSITION: ", self.position)
     # all eight rotors defined in case I want to expand to a four rotor enigma
     def set_rotor(self):
         rotors = {
