@@ -53,7 +53,7 @@ def encrypt(message, settings):
 
         new_message += alpha[idx]
     
-    print(new_message)
+    # print(new_message)
     return new_message
 
 

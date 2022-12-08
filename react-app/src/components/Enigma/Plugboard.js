@@ -18,7 +18,7 @@ const Plugboard = () => {
 
         if (!selectedCharacter && plugboardSettings[char] !== char) {
             setCharToRevert(plugboardSettings[char]);
-            console.log(charToRevert)
+            // console.log(charToRevert)
             setSelectedCharacter(char);
         } else if (selectedCharacter && charToRevert) {
             dispatch(setPlugboard(selectedCharacter, char));
