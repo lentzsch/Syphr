@@ -39,7 +39,7 @@ const OutputBox = () => {
 
     useEffect (() => {
         if (socket == undefined){
-            socket = io('https://syphr.herokuapp.com/');
+            socket = io('https://syphr-1v0q.onrender.com');
 
             socket.on('message', (outputMessage) => {
                 dispatch(handleMessages(currentConversation.messages.push(outputMessage)));

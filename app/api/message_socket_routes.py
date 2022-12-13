@@ -5,8 +5,8 @@ import os
 
 if os.environ.get("FLASK_ENV") == "production":
     origins = [
-        "http://syphr.herokuapp.com/",    
-        "https://syphr.herokuapp.com/"
+        "http://syphr-1v0q.onrender.com",
+        "https://syphr-1v0q.onrender.com"
     ]
 else:
     origins = "*"
