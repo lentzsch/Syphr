@@ -18,14 +18,7 @@ function WelcomeModal() {
                         due to the fact that the settings had 158,962,555,217,826,360,000 potential combinations.
                     </p>
                     <p>
-                        In an unfortunate case of "well, it works on my machine", there appears to be a potential extreme delay between
-                        requests and responses of up to 17 full seconds, especially in Chrome. This is clearly unacceptable. It appears to potentially be an issue
-                        with Heroku's dynos. I will be looking into alternative options. Sorry for
-                        any inconvenience.``
-                    </p>
-                    <p>
-                        In spite of the potential delay, the app does still work. To quickly get started,
-                        press the "Demo" button and you will be logged in as a.turing@blecthleypark.gov,
+                        To quickly get started, press the "Demo" button and you will be logged in as a.turing@blecthleypark.gov,
                         codename "Turing". When searching for users to send a messages to, you may see
                         some other members from MI6's XX committee, but you are looking for "C", the codename
                         for Stuart Menzies, the head of MI6. He has sent you instructions encrypted with the default enigma settings.
