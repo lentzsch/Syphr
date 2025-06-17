@@ -1,6 +1,6 @@
 # Syphr
 
-## NOTE! This was my old capstone project and while it's not bad for a two week solo project to graduate App Academy, there are many issues with it from a realworld production standpoint. I plan on forking and refactoring creating a "before and after" to showcase my growth.
+## NOTE! This was my old capstone project and while it's not bad for a two week solo project to graduate App Academy, there are many issues with it from a real world production standpoint. I plan on forking and refactoring creating a "before and after" to showcase my growth.
 
 ## Introduction
 Welcome to Syphr! Syphr is my solo capstone project from my time at App Academy. It is a messaging app that is really just a thinly veiled excuse to build a historically accurate emulation of the Enigma Machine from WWII.
